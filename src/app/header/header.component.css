@@ -11,13 +11,16 @@
 .logo {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   flex: 1;
   flex-wrap: wrap;
 }
 
-.logo img {
-  height: 80px;
+.logo a {
+  text-decoration: none;
+  font-size: 25px;
+  color:greenyellow;
 }
 
 .search-box {
@@ -61,9 +64,9 @@ font-size: 20px;
   align-items: center;
 }
 
-.loginbtn, .cartbtn {
+.loginbtn, .cartbtn, .help{
   height: 3rem;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
   border-radius: 20px;
   background: transparent;
   border: none;
@@ -74,6 +77,11 @@ font-size: 20px;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+.help{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .loginbtn:hover {
