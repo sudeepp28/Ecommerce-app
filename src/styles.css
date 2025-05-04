@@ -1,0 +1,14 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: aliceblue;
+  color: #ede8f7;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
