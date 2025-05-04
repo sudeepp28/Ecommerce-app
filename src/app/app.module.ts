@@ -6,9 +6,10 @@ import { CommonModule } from "@angular/common";
 
 import { SliderComponent } from "./slider/slider.component";
 import { HeaderComponent } from "./header/header.component";
+import { ProductChartComponent } from "./product-chart/product-chart.component";
 
 @NgModule({
-    declarations:[AppComponent,SliderComponent,HeaderComponent],
+    declarations:[AppComponent,SliderComponent,HeaderComponent,ProductChartComponent],
     bootstrap:[AppComponent],
     imports: [FormsModule, BrowserModule,CommonModule]
 })
