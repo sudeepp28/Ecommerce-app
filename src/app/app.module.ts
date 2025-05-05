@@ -7,11 +7,13 @@ import { CommonModule } from "@angular/common";
 import { SliderComponent } from "./slider/slider.component";
 import { HeaderComponent } from "./header/header.component";
 import { ProductChartComponent } from "./product-chart/product-chart.component";
+import { AppRoutingModule } from "./app.routing-module";
+import { MobileComponent } from "./Mobile/mobile-slider/mobile.component";
 
 @NgModule({
-    declarations:[AppComponent,SliderComponent,HeaderComponent,ProductChartComponent],
+    declarations:[AppComponent,SliderComponent,HeaderComponent,ProductChartComponent,MobileComponent],
     bootstrap:[AppComponent],
-    imports: [FormsModule, BrowserModule,CommonModule]
+    imports: [FormsModule, BrowserModule,CommonModule,AppRoutingModule]
 })
 
 export class AppModule{}
