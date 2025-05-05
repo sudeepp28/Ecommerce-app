@@ -1,10 +1,12 @@
 <div class="product-container">
     <div class="product-chart">
         @for (product of products; track product.src) {
+         <a [routerLink]="product.link">
           <div class="product">
             <img [src]="product.src" alt="{{ product.span }}">
             <span>{{ product.span }}</span>
           </div>
+         </a>
         }
       </div>
 </div>

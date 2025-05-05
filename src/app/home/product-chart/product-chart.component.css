@@ -13,6 +13,10 @@
     overflow:scroll;
     scrollbar-width: none;
 }
+.product-chart a{
+    text-decoration: none;
+    
+}
 /* .product-container{
     margin: 1rem;
 } */
@@ -26,7 +30,16 @@
     background-color: transparent;
    margin-top: 0.5rem;
     margin-bottom: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in;
 
+}
+.product:hover img{
+    
+    transform: scale(1.3);
+}
+.product:hover span{
+    transform: translateY(13px);
 }
 .product img{
     width: 4rem;

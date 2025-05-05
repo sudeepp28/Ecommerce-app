@@ -7,6 +7,7 @@ body {
   background-color: aliceblue;
   color: #ede8f7;
   overflow: hidden;
+  padding-top: 80px;
 }
 
 * {

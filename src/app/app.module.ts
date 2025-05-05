@@ -4,14 +4,16 @@ import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 
-import { SliderComponent } from "./slider/slider.component";
+import { SliderComponent } from "./home/slider/slider.component";
 import { HeaderComponent } from "./header/header.component";
-import { ProductChartComponent } from "./product-chart/product-chart.component";
+import { ProductChartComponent } from "./home/product-chart/product-chart.component";
 import { AppRoutingModule } from "./app.routing-module";
-import { MobileComponent } from "./Mobile/mobile-slider/mobile.component";
+import { MobileComponent } from "./Mobiles/Mobile/mobile.component";
+import { HomeComponent } from "./home/home/home.component";
+
 
 @NgModule({
-    declarations:[AppComponent,SliderComponent,HeaderComponent,ProductChartComponent,MobileComponent],
+    declarations:[AppComponent,SliderComponent,HeaderComponent,ProductChartComponent,MobileComponent,HomeComponent],
     bootstrap:[AppComponent],
     imports: [FormsModule, BrowserModule,CommonModule,AppRoutingModule]
 })

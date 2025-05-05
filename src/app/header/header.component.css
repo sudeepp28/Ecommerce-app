@@ -1,4 +1,9 @@
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,42 +26,43 @@
   text-decoration: none;
   font-size: 25px;
   color:greenyellow;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .search-box {
-display: flex;
-align-items: center;
-width: 100%;
-max-width: 400px;
-background: white;
-border-radius: 50px;
-overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  border-radius: 50px;
+  overflow: hidden;
 }
 
 .search-box input {
-flex: 1;
-padding: 12px 16px;
-font-size: 14px;
-border: none;
-outline: none;
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 14px;
+  border: none;
+  outline: none;
 }
 
 .search-box button {
-padding: 0 16px;
-/* background-color: #2874f0; */
-background: transparent;
-border: none;
-display: flex;
-align-items: center;
-justify-content: center;
-cursor: pointer;
+  padding: 0 16px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .search-box i {
-color: black;
-font-size: 20px;
+  color: black;
+  font-size: 20px;
 }
-
 
 .navigation {
   display: flex;
@@ -64,9 +70,8 @@ font-size: 20px;
   align-items: center;
 }
 
-.loginbtn, .cartbtn, .help{
+.loginbtn, .cartbtn, .help {
   height: 3rem;
-  /* padding: 0 1rem; */
   border-radius: 20px;
   background: transparent;
   border: none;
@@ -78,7 +83,8 @@ font-size: 20px;
   align-items: center;
   gap: 0.5rem;
 }
-.help{
+
+.help {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,10 +110,6 @@ font-size: 20px;
     gap: 10px;
   }
 
-  .logo img {
-    height: 60px;
-  }
-
   .search-box {
     width: 100%;
     justify-content: center;
@@ -122,6 +124,7 @@ font-size: 20px;
     justify-content: center;
     width: 100%;
     margin-top: 10px;
+    flex-wrap: wrap;
   }
 
   .loginbtn, .cartbtn {
