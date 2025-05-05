@@ -1,21 +1,17 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-slider',
-  standalone:false,
-  templateUrl: './slider.component.html',
-  styleUrl: './slider.component.css'
+  selector: 'app-mslider',
+ standalone:false,
+  templateUrl: './mslider.component.html',
+  styleUrl: './mslider.component.css'
 })
-
-
-
-export class SliderComponent implements OnInit {
+export class MSliderComponent implements OnInit {
   images = [
-    { src: 'assets/banner1.jpg', alt: 'Image 1' },
-    { src: 'assets/banner2.jpg', alt: 'Image 2' },
-    { src: 'assets/banner3.jpg', alt: 'Image 3' },
-    { src: 'assets/banner4.jpg', alt: 'Image 4' },
-    { src: 'assets/banner5.jpg', alt: 'Image 5' }
+    { src: 'assets/Mobile-assets/MBanner1.jpg', alt: 'Image 1' },
+    { src: 'assets/Mobile-assets/MBanner2.png', alt: 'Image 3' },
+    { src: 'assets/Mobile-assets/MBanner3.png', alt: 'Image 4' },
+    
   ];
 
   current = 0;
