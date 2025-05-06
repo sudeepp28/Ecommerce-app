@@ -14,7 +14,7 @@ export class ProductChartComponent {
   },
   {src:'assets/product-chart/mobile.webp',
     span:'Mobiles & Tablets',
-     link:"/Mobile & Tablets"
+     link:"/mobiles"
   },
   {src:'assets/product-chart/appliances.webp',
     span:'Appliances',

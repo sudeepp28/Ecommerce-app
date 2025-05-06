@@ -8,7 +8,7 @@
       <img [src]="images[0].src" [alt]="images[0].alt" />
     </div>
   </div>
-  
+
   <p class="dots">
     @for (image of images; let i = $index; track image) {
       <span class="dot" [class.active]="i === current"></span>
