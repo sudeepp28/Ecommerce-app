@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './mobile.component.css'
 })
 export class MobileComponent {
-
+ 
 }

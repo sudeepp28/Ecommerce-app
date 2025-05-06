@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { MobileService } from '../Mobile/mobile.service';
 
 @Component({
   selector: 'app-mobiles-container',
@@ -7,42 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './mobiles-container.component.css'
 })
 export class MobilesContainerComponent {
-  MDisplayB=[
-    {
-      src:"assets/Mobile-assets/mDisplay/mDisplayB1.png",
-      alt:"b1"
-    },
-    {
-      src:"assets/Mobile-assets/mDisplay/mDisplayB2.png",
-      alt:"b2"
-    },
-    {
-      src:"assets/Mobile-assets/mDisplay/mDisplayB3.png",
-      alt:"b3"
-    },
-    {
-      src:"assets/Mobile-assets/mDisplay/mDisplayB1.png",
-      alt:"b1"
-    },
-    {
-      src:"assets/Mobile-assets/mDisplay/mDisplayB2.png",
-      alt:"b2"
-    },
-    {
-      src:"assets/Mobile-assets/mDisplay/mDisplayB3.png",
-      alt:"b3"
-    },
-    {
-      src:"assets/Mobile-assets/mDisplay/mDisplayB1.png",
-      alt:"b1"
-    },
-    {
-      src:"assets/Mobile-assets/mDisplay/mDisplayB2.png",
-      alt:"b2"
-    },
-    {
-      src:"assets/Mobile-assets/mDisplay/mDisplayB3.png",
-      alt:"b3"
-    }
-  ]
+constructor(private mobileService:MobileService){}
+
+get banners(){
+  return this.mobileService.MDisplayB
+}
 }
