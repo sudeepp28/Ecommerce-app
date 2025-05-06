@@ -8,6 +8,8 @@ body {
   color: #ede8f7;
   overflow: hidden;
   padding-top: 80px;
+  overflow: scroll;
+ 
 }
 
 * {

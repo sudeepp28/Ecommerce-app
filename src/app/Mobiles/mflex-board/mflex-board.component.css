@@ -1,0 +1,52 @@
+
+
+
+.FB-container {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    
+  }
+  
+  .flexboard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .flexboard img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    animation: slowRotate 5s linear infinite;
+  }
+  
+  .flexboard img:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Responsive adjustments for wider screens */
+  @media (min-width: 768px) {
+    .flexboard {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .flexboard img {
+      width: 45%;
+    }
+  }
+  @keyframes slowRotate {
+    0%,100% {
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(1.025);
+    }
+  }

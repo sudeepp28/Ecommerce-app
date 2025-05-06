@@ -1,0 +1,73 @@
+.container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .Mbanners {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .Mbanners img {
+    width: 100%;
+    max-width: 500px;
+    height: 250px;              /* Fixed height */
+    object-fit: cover;        /* Prevent cropping */
+    border-radius: 12px;
+    background-color: #f9f9f9;  /* Optional: shows behind transparent images */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  @media (max-width:1079px) {
+    .Mbanners img{
+        height: 175px;
+        max-width: 300px;
+        
+    }
+  }
+  /* Rotation animations */
+  @keyframes rotateCW {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotateCCW {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  /* Alternate rotation direction */
+  /* .Mbanners img:nth-child(odd) {
+    animation-name: rotateCW;
+  }
+  
+  .Mbanners img:nth-child(even) {
+    animation-name: rotateCCW;
+  } */
+  
+  /* Responsive tweak for smaller screens */
+  @media (max-width: 768px) {
+    .Mbanners img {
+      max-width: 90%;
+      height: 250px;
+    }
+  }
+  .Mbanners a{
+    gap: 1rem;
+  }
+  

@@ -10,13 +10,15 @@ import { ProductChartComponent } from "./home/product-chart/product-chart.compon
 import { AppRoutingModule } from "./app.routing-module";
 import { MobileComponent } from "./Mobiles/Mobile/mobile.component";
 import { HomeComponent } from "./home/home/home.component";
+import { MFlexBoardComponent } from "./Mobiles/mflex-board/mflex-board.component";
+import { MobilesContainerComponent } from "./Mobiles/mobiles-container/mobiles-container.component";
 
 
 
 
 
 @NgModule({
-    declarations:[AppComponent,SliderComponent,HeaderComponent,ProductChartComponent,MobileComponent,HomeComponent,],
+    declarations:[AppComponent,SliderComponent,HeaderComponent,ProductChartComponent,MobileComponent,HomeComponent,MFlexBoardComponent,MobilesContainerComponent],
     bootstrap:[AppComponent],
     imports: [FormsModule, BrowserModule,CommonModule,AppRoutingModule]
 })
