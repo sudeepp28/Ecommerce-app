@@ -12,13 +12,14 @@ import { MobileComponent } from "./Mobiles/Mobile/mobile.component";
 import { HomeComponent } from "./home/home/home.component";
 import { MFlexBoardComponent } from "./Mobiles/mflex-board/mflex-board.component";
 import { MobilesContainerComponent } from "./Mobiles/mobiles-container/mobiles-container.component";
+import { ProductPageComponent } from "./product-page/product-page.component";
 
 
 
 
 
 @NgModule({
-    declarations:[AppComponent,SliderComponent,HeaderComponent,ProductChartComponent,MobileComponent,HomeComponent,MFlexBoardComponent,MobilesContainerComponent],
+    declarations:[AppComponent,SliderComponent,HeaderComponent,ProductChartComponent,MobileComponent,HomeComponent,MFlexBoardComponent,MobilesContainerComponent,ProductPageComponent],
     bootstrap:[AppComponent],
     imports: [FormsModule, BrowserModule,CommonModule,AppRoutingModule]
 })

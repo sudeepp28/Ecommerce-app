@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { MobileService } from '../Mobile/mobile.service';
+
+import { MDisplayB } from '../Mobile/mobileBData';
 
 @Component({
   selector: 'app-mobiles-container',
@@ -8,9 +9,10 @@ import { MobileService } from '../Mobile/mobile.service';
   styleUrl: './mobiles-container.component.css'
 })
 export class MobilesContainerComponent {
-constructor(private mobileService:MobileService){}
+mdisplayB=MDisplayB
 
-get banners(){
-  return this.mobileService.MDisplayB
+onSelectProduct(){
+  
 }
+
 }

@@ -1,7 +1,7 @@
 <div class="container">
     <div class="Mbanners">
-        @for(image of banners; track image){
-            <a href="">
+        @for(image of mdisplayB; track image){
+            <a href="" (click)="onSelectProduct()">
                
                 <img [src]="image.src" [alt]="image.alt">
             </a>
