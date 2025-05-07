@@ -1,9 +1,11 @@
 <div class="container">
     <div class="Mbanners">
         @for(image of mdisplayB; track image){
-            <a href="" (click)="onSelectProduct()">
-               
+            <a [routerLink]="image.link" >
+               <div (click)="onSelectProduct(image)">
                 <img [src]="image.src" [alt]="image.alt">
+               </div>
+               
             </a>
         }
     </div>

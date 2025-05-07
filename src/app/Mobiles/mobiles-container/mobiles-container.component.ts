@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { MDisplayB } from '../mobileBData';
 
-import { MDisplayB } from '../Mobile/mobileBData';
+
 
 @Component({
   selector: 'app-mobiles-container',
@@ -11,8 +12,10 @@ import { MDisplayB } from '../Mobile/mobileBData';
 export class MobilesContainerComponent {
 mdisplayB=MDisplayB
 
-onSelectProduct(){
+@Output() product=new EventEmitter()
+onSelectProduct(image:any){
   
+  this.product.emit(image)
 }
 
 }
