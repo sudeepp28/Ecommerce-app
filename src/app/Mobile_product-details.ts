@@ -3,7 +3,7 @@ export const Products = [
     id: 1,
     iphone16: [
       { pid: 101, model: "iPhone 16", specs: "128GB UltraMine", price: "67,900",src:"assets/Mobile-assets/mobiles/apple/iPhone16.jpg"},
-      { pid: 102, model: "iPhone 16 Plus", specs: "256GB, white", price: "77,999",src:"assets/Mobile-assets/mobiles/apple/iPhone 16 Plus.webp" },
+      { pid: 102, model: "iPhone 16 Plus", specs: "256GB, white", price: "77,999",src:"assets/Mobile-assets/mobiles/apple/iPhone 16Plus.png " },
       { pid: 103, model: "iPhone 16 Pro", specs: "256GB, Natural Titanium", price: "112900",src:"assets/Mobile-assets/mobiles/apple/iPhone16 pro.jpg" },
       { pid: 104, model: "iPhone 16 Pro Max", specs: "512, Desert Titanium", price: "1,35,900",src:"assets/Mobile-assets/mobiles/apple/iPhone 16 Pro Max.jpg"}
     ]
@@ -11,10 +11,10 @@ export const Products = [
   {
     id: 2,
     samsungGalaxyS25: [
-      { pid: 201, model: "Galaxy S25", specs: "8GB RAM, 128GB", price: "74999" },
-      { pid: 202, model: "Galaxy S25+", specs: "12GB RAM, 256GB", price: "89999" },
-      { pid: 203, model: "Galaxy S25 Ultra", specs: "16GB RAM, 512GB", price: "119999" },
-      { pid: 204, model: "Galaxy S25 FE", specs: "6GB RAM, 128GB", price: "64999" }
+      { pid: 201, model: "Galaxy S25", specs: "8GB RAM, 128GB", price: "74999",src:"assets/Mobile-assets/mobiles/samsung/SamsungG S25.png"},
+      { pid: 202, model: "Galaxy S25+", specs: "12GB RAM, 256GB", price: "89999",src:"assets/Mobile-assets/mobiles/samsung/SamsungG S25.png" },
+      { pid: 203, model: "Galaxy S25 Ultra", specs: "16GB RAM, 512GB", price: "119999",src:"assets/Mobile-assets/mobiles/samsung/SamsungG S25.png" },
+      { pid: 204, model: "Galaxy S25 FE", specs: "6GB RAM, 128GB", price: "64999",src:"assets/Mobile-assets/mobiles/samsung/SamsungG S25.png" }
     ]
   },
   {
