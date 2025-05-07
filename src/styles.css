@@ -5,7 +5,7 @@ html {
 body {
   margin: 0;
   background-color: aliceblue;
-  color: #ede8f7;
+  color: #000;
   overflow: hidden;
   padding-top: 80px;
   overflow: scroll;
@@ -14,4 +14,5 @@ body {
 
 * {
   box-sizing: border-box;
+
 }

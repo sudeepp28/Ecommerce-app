@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MDisplayB } from '../mobileBData';
+import { MobileService } from '../../mobile.service';
 
 
 
@@ -12,10 +13,9 @@ import { MDisplayB } from '../mobileBData';
 export class MobilesContainerComponent {
 mdisplayB=MDisplayB
 
-@Output() product=new EventEmitter()
-onSelectProduct(image:any){
-  
-  this.product.emit(image)
-}
+constructor(private mobileService:MobileService){}
 
+selectBanner(BannerId:any){
+  this.mobileService.setSelectedProductId(BannerId)
+}
 }

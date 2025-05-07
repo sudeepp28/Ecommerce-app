@@ -1,5 +1,20 @@
-<!-- product-page.component.html -->
-<p *ngIf="selectedBannerId">
-    Selected Banner ID: {{ selectedBannerId }}
-  </p>
-  
+<h2>{{ selectedProductName | titlecase }}</h2>
+
+@if (selectedProductList.length > 0) {
+  <div class="product-grid">
+    @for (product of selectedProductList; track product.pid) {
+      <div class="product-card">
+        @if (product.src) {
+          <img [src]="product.src" alt="{{ product.model }}" class="product-image" />
+        }
+        <div class="product-details">
+          <h3>{{ product.model }}</h3>
+          <p>{{ product.specs }}</p>
+          <p class="price">Price: ₹{{ product.price }}</p>
+        </div>
+      </div>
+    }
+  </div>
+} @else {
+  <p>No product details found.</p>
+}

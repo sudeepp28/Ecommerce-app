@@ -1,9 +1,9 @@
 <div class="container">
     <div class="Mbanners">
-        @for(image of mdisplayB; track image){
-            <a [routerLink]="image.link" >
-               <div (click)="onSelectProduct(image)">
-                <img [src]="image.src" [alt]="image.alt">
+        @for(banner of mdisplayB; track banner){
+            <a [routerLink]="banner.link" (click)="selectBanner(banner.id)">
+               <div >
+                <img [src]="banner.src" [alt]="banner.alt">
                </div>
                
             </a>
