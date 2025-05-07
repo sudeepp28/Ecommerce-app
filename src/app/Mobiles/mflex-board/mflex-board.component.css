@@ -1,52 +1,57 @@
-
-
-
 .FB-container {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    
-  }
-  
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.flexboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+/* Image container link */
+.flexboard a {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  transition: transform 0.3s ease;
+}
+
+/* Image styling */
+.flexboard img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  animation: pulseScale 5s ease-in-out infinite;
+}
+
+/* Hover effect */
+
+
+/* Responsive layout for medium+ screens */
+@media (min-width: 768px) {
   .flexboard {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
-    align-items: center;
   }
-  
-  .flexboard img {
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    animation: slowRotate 5s linear infinite;
+
+  .flexboard a {
+    width: 45%;
   }
-  
-  .flexboard img:hover {
-    transform: scale(1.02);
+}
+
+/* Pulse animation (gentle zoom in/out) */
+@keyframes pulseScale {
+  0%, 100% {
+    transform: scale(1);
   }
-  
-  /* Responsive adjustments for wider screens */
-  @media (min-width: 768px) {
-    .flexboard {
-      flex-direction: row;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-  
-    .flexboard img {
-      width: 45%;
-    }
+  50% {
+    transform: scale(1.025);
   }
-  @keyframes slowRotate {
-    0%,100% {
-      transform: scale(1);
-    }
-    50%{
-      transform: scale(1.025);
-    }
-  }
+}
