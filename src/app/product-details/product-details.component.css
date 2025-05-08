@@ -9,6 +9,7 @@
     gap: 5rem;
   }
   
+
   /* Product Image */
   .product-image {
     max-width: 300px;
@@ -80,6 +81,24 @@
   }
   
   /* Add responsive design */
+  @media  (max-width: 638px) {
+    .product-details-container {
+      padding: 12px;
+      flex-direction:column ;
+    }
+  
+    .product-details h2 {
+      font-size: 1.6rem;
+    }
+  
+    .product-specs {
+      font-size: 1rem;
+    }
+  
+    .product-price {
+      font-size: 1.3rem;
+    }
+  }
   @media screen and (max-width: 768px) {
     .product-details-container {
       padding: 15px;
