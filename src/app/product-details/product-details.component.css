@@ -1,136 +1,123 @@
 /* General styling */
 .product-details-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 10rem auto;
-    gap: 5rem;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 10rem auto;
+  gap: 5rem;
+}
 
-  /* Product Image */
-  .product-image {
-    max-width: 300px;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+
+/* Product Image */
+.product-image {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+/* Product Details */
+.product-details {
+  text-align: center;
+  padding: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.product-details h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.product-specs {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #555;
+}
+
+.product-specs strong {
+  font-weight: bold;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-top: 20px;
+}
+
+/* Price Section */
+.product-price p {
+  margin-top: 10px;
+}
+
+.product-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 20px;
+ 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.cart{
+  background-color: #2874f0;
+}
+.product-button:hover{
+  transform: scale(1.15);
+}
+
+
+/* Add responsive design */
+@media  (max-width: 638px) {
+  .product-details-container {
+    padding: 12px;
+    flex-direction:column ;
   }
-  
-  .product-image:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Product Details */
-  .product-details {
-    text-align: center;
-    padding: 10px;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  
+
   .product-details h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 1.6rem;
   }
-  
+
   .product-specs {
-    font-size: 1.1rem;
-    margin: 10px 0;
-    color: #555;
+    font-size: 1rem;
   }
-  
-  .product-specs strong {
-    font-weight: bold;
-  }
-  
+
   .product-price {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #e74c3c;
-    margin-top: 20px;
+    font-size: 1.3rem;
   }
-  
-  /* Price Section */
-  .product-price p {
-    margin-top: 10px;
+}
+@media screen and (max-width: 768px) {
+  .product-details-container {
+    padding: 15px;
   }
-  
-  .product-button {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #2980b9;
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-    text-decoration: none;
-    margin-top: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+
+  .product-details h2 {
+    font-size: 1.6rem;
   }
-  
-  .product-button:hover {
-    background-color: #3498db;
+
+  .product-specs {
+    font-size: 1rem;
   }
-  
-  /* Add responsive design */
-  @media  (max-width: 638px) {
-    .product-details-container {
-      padding: 12px;
-      flex-direction:column ;
-    }
-  
-    .product-details h2 {
-      font-size: 1.6rem;
-    }
-  
-    .product-specs {
-      font-size: 1rem;
-    }
-  
-    .product-price {
-      font-size: 1.3rem;
-    }
+
+  .product-price {
+    font-size: 1.3rem;
   }
-  @media screen and (max-width: 768px) {
-    .product-details-container {
-      padding: 15px;
-    }
-  
-    .product-details h2 {
-      font-size: 1.6rem;
-    }
-  
-    .product-specs {
-      font-size: 1rem;
-    }
-  
-    .product-price {
-      font-size: 1.3rem;
-    }
-  }
-  button{
-    height: 3rem;
-    width: auto;
-    margin: 1rem;
-    border-radius: 10px;
-    background-color: #2874f0;
-    color: #fff;
-    font-size: 15px;
-    font-style:italic ;
-    font-weight: bold;
-    cursor: pointer;
-    
-  }
-  button:hover{
-    transform: scale(1.2);
-    transition: transform 0.5s ease-in-out;
-  }
-  
+}
+
