@@ -1,37 +1,41 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Products } from '../Mobile_product-details';  // Ensure this path is correct
+import { Products } from '../Mobile_product-details';  // Your product list
 
 @Component({
   selector: 'app-product-page',
-  standalone: false,
+  standalone:false,
   templateUrl: './product-page.component.html',
   styleUrls: ['./product-page.component.css']
 })
 export class ProductPageComponent implements OnInit {
   selectedProductList: any[] = [];
   selectedProductName: string = '';
+  selectedProductId: number | null = null; // <-- Add this
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    // Get the 'id' from the route params
-    const id = this.route.snapshot.paramMap.get('id');
-    console.log('Product ID from route:', id);  // Log the id to the console
+    const idParam = this.route.snapshot.paramMap.get('id');
+    this.selectedProductId = idParam ? parseInt(idParam, 10) : null; // <-- Store the ID
 
-    if (id) {
-      // Convert id to number for matching
-      const matchedProduct = Products.find(p => p.id === Number(id));
+    console.log('Selected Product ID:', this.selectedProductId);
+
+    if (this.selectedProductId !== null) {
+      const matchedProduct = Products.find(product => product.id === this.selectedProductId);
 
       if (matchedProduct) {
-        const [key, value] = Object.entries(matchedProduct).find(([k]) => k !== 'id')!;
-        this.selectedProductName = key;
-        this.selectedProductList = value;
+        const entry = Object.entries(matchedProduct).find(([key]) => key !== 'id');
+        if (entry) {
+          const [key, value] = entry;
+          this.selectedProductName = key;
+          this.selectedProductList = Array.isArray(value) ? value : [];
+        }
       } else {
-        console.log('No product found for the ID:', id);
+        console.warn(`No product found with id: ${this.selectedProductId}`);
       }
     } else {
-      console.log('No ID found in the route');
+      console.error('No product ID found in route');
     }
   }
 }

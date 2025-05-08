@@ -14,13 +14,14 @@ import { MFlexBoardComponent } from "./Mobiles/mflex-board/mflex-board.component
 import { MobilesContainerComponent } from "./Mobiles/mobiles-container/mobiles-container.component";
 import { ProductPageComponent } from "./product-page/product-page.component";
 import { MobileComponent } from "./Mobiles/mobile.component";
+import { ProductDetailsComponent } from "./product-details/product-details.component";
 
 
 
 
 
 @NgModule({
-    declarations:[AppComponent,SliderComponent,HeaderComponent,ProductChartComponent,MobileComponent,HomeComponent,MFlexBoardComponent,MobilesContainerComponent,ProductPageComponent],
+    declarations:[AppComponent,SliderComponent,HeaderComponent,ProductChartComponent,MobileComponent,HomeComponent,MFlexBoardComponent,MobilesContainerComponent,ProductPageComponent,ProductDetailsComponent],
     bootstrap:[AppComponent],
     imports: [FormsModule, BrowserModule,CommonModule,AppRoutingModule]
 })

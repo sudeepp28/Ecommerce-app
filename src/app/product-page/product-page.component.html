@@ -3,16 +3,18 @@
 @if (selectedProductList.length > 0) {
   <div class="product-grid">
     @for (product of selectedProductList; track product.pid) {
-      <div class="product-card">
-        @if (product.src) {
-          <img [src]="product.src" alt="{{ product.model }}" class="product-image" />
-        }
-        <div class="product-details">
-          <h3>{{ product.model }}</h3>
-          <p>{{ product.specs }}</p>
-          <p class="price">Price: ₹{{ product.price }}</p>
+      <a [routerLink]="['/product-details', selectedProductId, product.pid]" class="product-card">
+        <div class="product-card">
+          @if (product.src) {
+            <img [src]="product.src" alt="{{ product.model }}" class="product-image" />
+          }
+          <div class="product-details">
+            <h3>{{ product.model }}</h3>
+            <p>{{ product.specs }}</p>
+            <p class="price">Price: ₹{{ product.price }}</p>
+          </div>
         </div>
-      </div>
+      </a>
     }
   </div>
 } @else {

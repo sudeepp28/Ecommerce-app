@@ -12,7 +12,5 @@ export class MobilesContainerComponent {
 
   constructor() {}
 
-  selectBanner(BannerId: number) {
-    // Navigate using routerLink, no service logic needed
-  }
+  
 }
