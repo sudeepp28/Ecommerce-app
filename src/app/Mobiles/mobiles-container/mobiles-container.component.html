@@ -1,12 +1,12 @@
 <div class="container">
     <div class="Mbanners">
-        @for(banner of mdisplayB; track banner){
-            <a [routerLink]="banner.link" (click)="selectBanner(banner.id)">
-               <div >
-                <img [src]="banner.src" [alt]="banner.alt">
-               </div>
-               
-            </a>
-        }
+      @for (banner of mdisplayB; track banner) {
+        <a [routerLink]="['/product-page', banner.id]">
+          <div>
+            <img [src]="banner.src" [alt]="banner.alt">
+          </div>
+        </a>
+      }
     </div>
-</div>
+  </div>
+  

@@ -1,8 +1,6 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { Products } from '../Mobile_product-details';
-import { MobileService } from '../mobile.service';
+import { Products } from '../Mobile_product-details';  // Ensure this path is correct
 
 @Component({
   selector: 'app-product-page',
@@ -11,25 +9,29 @@ import { MobileService } from '../mobile.service';
   styleUrls: ['./product-page.component.css']
 })
 export class ProductPageComponent implements OnInit {
-  SelectedBannerId:number | null=null
-product=Products;
-selectedProductList: any[] = [];
-selectedProductName: string = '';
-  constructor(private mobileService:MobileService){}
+  selectedProductList: any[] = [];
+  selectedProductName: string = '';
 
-  ngOnInit() {
-    this.SelectedBannerId=this.mobileService.getSelectedProductId()
-    console.log(this.SelectedBannerId);
-    
+  constructor(private route: ActivatedRoute) { }
 
-    if(this.SelectedBannerId !==null){
-      const matchedProduct=this.product.find(p=>p.id===this.SelectedBannerId)
+  ngOnInit(): void {
+    // Get the 'id' from the route params
+    const id = this.route.snapshot.paramMap.get('id');
+    console.log('Product ID from route:', id);  // Log the id to the console
 
-      if(matchedProduct){
-        const[key,value]=Object.entries(matchedProduct).find(([k])=>k!=='id')!;
-        this.selectedProductName=key;
-        this.selectedProductList=value;
+    if (id) {
+      // Convert id to number for matching
+      const matchedProduct = Products.find(p => p.id === Number(id));
+
+      if (matchedProduct) {
+        const [key, value] = Object.entries(matchedProduct).find(([k]) => k !== 'id')!;
+        this.selectedProductName = key;
+        this.selectedProductList = value;
+      } else {
+        console.log('No product found for the ID:', id);
       }
+    } else {
+      console.log('No ID found in the route');
     }
   }
 }

@@ -10,8 +10,9 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'mobiles', component: MobileComponent },
-  {path:'product-page/:name', component:ProductPageComponent}  
+  { path: 'product-page/:id', component: ProductPageComponent }  // Notice ':id' here
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })],

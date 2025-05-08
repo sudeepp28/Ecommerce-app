@@ -1,21 +1,18 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { MDisplayB } from '../mobileBData';
-import { MobileService } from '../../mobile.service';
-
-
 
 @Component({
   selector: 'app-mobiles-container',
-  standalone:false,
+  standalone: false,
   templateUrl: './mobiles-container.component.html',
   styleUrl: './mobiles-container.component.css'
 })
 export class MobilesContainerComponent {
-mdisplayB=MDisplayB
+  mdisplayB = MDisplayB;
 
-constructor(private mobileService:MobileService){}
+  constructor() {}
 
-selectBanner(BannerId:any){
-  this.mobileService.setSelectedProductId(BannerId)
-}
+  selectBanner(BannerId: number) {
+    // Navigate using routerLink, no service logic needed
+  }
 }
