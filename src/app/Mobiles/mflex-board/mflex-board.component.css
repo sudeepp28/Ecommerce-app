@@ -31,6 +31,10 @@
 
 /* Hover effect */
 
+.flexboard a:hover{
+  cursor: pointer;
+
+}
 
 /* Responsive layout for medium+ screens */
 @media (min-width: 768px) {
