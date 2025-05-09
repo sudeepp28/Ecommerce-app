@@ -69,6 +69,9 @@
   gap: 1rem;
   align-items: center;
 }
+.navigation a{
+  text-decoration: none;
+}
 
 .loginbtn, .cartbtn, .help {
   height: 3rem;

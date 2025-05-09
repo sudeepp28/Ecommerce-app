@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Products } from '../Mobile_product-details';  // Your product list
+import { CartService } from '../cart/cart.service';
 
 @Component({
   selector: 'app-product-details',
@@ -12,7 +13,7 @@ export class ProductDetailsComponent implements OnInit {
   productDetails: any = null;
   productId: number | null = null;
   productPid: number | null = null;
-
+private cartService= inject(CartService)
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
@@ -42,6 +43,12 @@ export class ProductDetailsComponent implements OnInit {
       console.error('No product found with this ID:', this.productId);
     }
   }
+ addToCart():void{
+  if(this.productDetails){
+    this.cartService.addToCart(this.productDetails);
+    alert(`${this.productDetails.model} has been added to cart`)
+  }
+ }
  
 
 

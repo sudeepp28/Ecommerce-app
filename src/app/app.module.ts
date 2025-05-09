@@ -15,15 +15,29 @@ import { MobilesContainerComponent } from "./Mobiles/mobiles-container/mobiles-c
 import { ProductPageComponent } from "./product-page/product-page.component";
 import { MobileComponent } from "./Mobiles/mobile.component";
 import { ProductDetailsComponent } from "./product-details/product-details.component";
+import { CartComponent } from "./cart/cart.component";
 
 
 
 
 
 @NgModule({
-    declarations:[AppComponent,SliderComponent,HeaderComponent,ProductChartComponent,MobileComponent,HomeComponent,MFlexBoardComponent,MobilesContainerComponent,ProductPageComponent,ProductDetailsComponent],
+    declarations:[AppComponent,
+        SliderComponent,
+        HeaderComponent,
+        ProductChartComponent,
+        MobileComponent,
+        HomeComponent,
+        MFlexBoardComponent,
+        MobilesContainerComponent,
+        ProductPageComponent,
+        ProductDetailsComponent,
+        CartComponent],
     bootstrap:[AppComponent],
-    imports: [FormsModule, BrowserModule,CommonModule,AppRoutingModule]
+    imports: [FormsModule,
+         BrowserModule,
+         CommonModule
+         ,AppRoutingModule]
 })
 
 export class AppModule{}

@@ -1,0 +1,16 @@
+@if (cartItems.length > 0) {
+    @for ( item of cartItems;track item) {
+      <div class="cart-item">
+        <img [src]="item.src" alt="{{ item.model }}" class="product-image" />
+        <div class="product-details">
+          <h3>{{ item.model }}</h3>
+          <p>Price: ₹{{ item.price }}</p>
+          <p>Quantity: {{ item.quantity }}</p>
+          <button (click)="removeFromCart(item.pid)">Remove</button>
+        </div>
+      </div>
+    }
+  } @else {
+    <p>Your cart is empty.</p>
+  }
+  
