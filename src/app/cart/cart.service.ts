@@ -7,48 +7,59 @@ export class CartService {
   private cartItems: any[] = [];
 
   constructor() {
-    // Load cart data from localStorage on service initialization
-    const storedCart = localStorage.getItem('cartItems');
-    if (storedCart) {
-      this.cartItems = JSON.parse(storedCart);
-    }
+    this.loadCartFromLocalStorage(); // Load cart on service init
   }
 
-  // Get the cart items
+  private saveCartToLocalStorage(): void {
+    localStorage.setItem('cart', JSON.stringify(this.cartItems));
+  }
+
+  private loadCartFromLocalStorage(): void {
+    const storedCart = localStorage.getItem('cart');
+    this.cartItems = storedCart ? JSON.parse(storedCart) : [];
+  }
+
   getCartItems(): any[] {
     return this.cartItems;
   }
 
-  // Add item to the cart or update quantity if already present
   addToCart(product: any): void {
-    // Check if the product is already in the cart
-    const existingProduct = this.cartItems.find(item => item.pid === product.pid);
+    const existingItem = this.cartItems.find(item => item.pid === product.pid);
 
-    if (existingProduct) {
-      // If product exists, increase quantity
-      existingProduct.quantity += 1;
+    if (existingItem) {
+      existingItem.quantity += 1;
     } else {
-      // If product doesn't exist, add new product to the cart
       this.cartItems.push({ ...product, quantity: 1 });
     }
 
-    this.saveCart();
+    this.saveCartToLocalStorage();
   }
 
-  // Persist the cart data in localStorage
-  private saveCart(): void {
-    localStorage.setItem('cartItems', JSON.stringify(this.cartItems));
+  increaseQuantity(pid: number): void {
+    const item = this.cartItems.find(i => i.pid === pid);
+    if (item) {
+      item.quantity += 1;
+      this.saveCartToLocalStorage();
+    }
   }
 
-  // Optionally, remove item from cart
+  decreaseQuantity(pid: number): void {
+    const item = this.cartItems.find(i => i.pid === pid);
+    if (item && item.quantity > 1) {
+      item.quantity -= 1;
+    } else {
+      this.removeFromCart(pid);
+    }
+    this.saveCartToLocalStorage();
+  }
+
   removeFromCart(pid: number): void {
     this.cartItems = this.cartItems.filter(item => item.pid !== pid);
-    this.saveCart();
+    this.saveCartToLocalStorage();
   }
 
-  // Clear the entire cart
   clearCart(): void {
     this.cartItems = [];
-    localStorage.removeItem('cartItems');
+    localStorage.removeItem('cart');
   }
 }

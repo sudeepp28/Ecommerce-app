@@ -17,10 +17,23 @@ export class CartComponent implements OnInit {
     // Get the cart items from the service
     this.cartItems = this.cartService.getCartItems();
   }
+ increase(pid: number) {
+    this.cartService.increaseQuantity(pid);
+  }
 
+  decrease(pid: number) {
+    this.cartService.decreaseQuantity(pid);
+  }
   // Remove item from cart
-  removeFromCart(pid: number): void {
+  remove(pid: number): void {
     this.cartService.removeFromCart(pid);
     this.cartItems = this.cartService.getCartItems();  // Update cart items after removal
   }
+  getTotal(): number {
+  let total = 0;
+  for (let item of this.cartItems) {
+    total += item.price * item.quantity;
+  }
+  return total;
+}
 }
