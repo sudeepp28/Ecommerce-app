@@ -3,7 +3,7 @@ export const Products = [
     id: 1,
     iphone16: [
       { pid: 101, model: "iPhone 16", specs: "128GB UltraMine", price: 67900,src:"assets/Mobile-assets/mobiles/apple/iPhone16.jpg"},
-      { pid: 102, model: "iPhone 16 Plus", specs: "256GB, white", price: 77999,src:"assets/Mobile-assets/mobiles/apple/iPhone 16Plus.png " },
+      { pid: 102, model: "iPhone 16 Plus", specs: "256GB, white", price: 77999,src:"assets/Mobile-assets/mobiles/apple/iphone16plus.jpg " },
       { pid: 103, model: "iPhone 16 Pro", specs: "256GB, Natural Titanium", price: 112900,src:"assets/Mobile-assets/mobiles/apple/iphone 16 pro.png" },
       { pid: 104, model: "iPhone 16 Pro Max", specs: "512, Desert Titanium", price: 135900,src:"assets/Mobile-assets/mobiles/apple/iphone 16 pro.png"}
     ]
