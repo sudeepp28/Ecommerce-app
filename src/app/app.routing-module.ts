@@ -6,6 +6,7 @@ import { MobileComponent } from './Mobiles/mobile.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
+import { BUYComponent } from './buy/buy.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'mobiles', component: MobileComponent },
   { path: 'product-page/:id', component: ProductPageComponent },
   { path: 'product-details/:id/:pid', component: ProductDetailsComponent },
-  {path:'cart',component:CartComponent} // <-- new route
+  {path:'cart',component:CartComponent},
+  {path:'buy',component:BUYComponent} // <-- new route
 ];
 
 @NgModule({

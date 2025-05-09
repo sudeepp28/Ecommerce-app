@@ -16,6 +16,7 @@ import { ProductPageComponent } from "./product-page/product-page.component";
 import { MobileComponent } from "./Mobiles/mobile.component";
 import { ProductDetailsComponent } from "./product-details/product-details.component";
 import { CartComponent } from "./cart/cart.component";
+import { BUYComponent } from "./buy/buy.component";
 
 
 
@@ -32,7 +33,7 @@ import { CartComponent } from "./cart/cart.component";
         MobilesContainerComponent,
         ProductPageComponent,
         ProductDetailsComponent,
-        CartComponent],
+        CartComponent,BUYComponent],
     bootstrap:[AppComponent],
     imports: [FormsModule,
          BrowserModule,

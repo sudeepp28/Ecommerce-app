@@ -1,0 +1,19 @@
+<h2>Review Your Order</h2>
+
+@if(cartItems.length>0){
+    
+    @for(item of cartItems;track item){
+
+        <div class="order-items">
+            <h3>{{item.model}}</h3>
+        <img [src]="item.src" alt="">
+        <p>{{item.specs}}</p>
+        <p>{{item.quantity}}</p>
+        <p>Price: ₹{{ item.price }} × {{ item.quantity }}</p>
+        </div>
+        
+    }
+
+    <h3>Total Amount : {{totalAmount }}</h3>
+    <button class="cnfOrder" (click)="confirmOrder()" >Confirm order</button>
+}

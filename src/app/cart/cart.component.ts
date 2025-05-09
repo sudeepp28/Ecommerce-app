@@ -38,7 +38,7 @@ export class CartComponent implements OnInit {
   return total;
 }
 proceedToBuy(){
-  alert('proceeding to buy')
+   this.router.navigate(['/buy']);
 }
  clearCart(){
   this.cartService.clearCart()
