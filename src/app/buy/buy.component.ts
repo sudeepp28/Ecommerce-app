@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CartService } from '../cart/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-buy',
@@ -10,7 +11,7 @@ import { CartService } from '../cart/cart.service';
 export class BUYComponent {
   cartItems: any[]=[];
   totalAmount=0
-  constructor(private cartService:CartService){}
+  constructor(private cartService:CartService,private router:Router){}
 
   ngOnInit(): void {
     this.cartItems = this.cartService.getCartItems();
@@ -25,5 +26,11 @@ export class BUYComponent {
 
 confirmOrder(){
 alert('Your Order is Placed')
+this.clearCart()
+this.router.navigate(['/home'])
 }
+clearCart(){
+  this.cartService.clearCart()
+  this.cartItems=[]
+ }
 }
