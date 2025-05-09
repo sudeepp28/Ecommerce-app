@@ -1,6 +1,7 @@
 <h2>Cart</h2>
 
 @if (cartItems.length > 0) {
+  <button (click)=" clearCart()">clear Cart</button>
   @for (item of cartItems; track item.pid) {
     <div class="cart-item">
       <img [src]="item.src" alt="{{ item.model }}" />
@@ -20,8 +21,15 @@
   <div class="cart-total">
     <h3>Total: ₹{{ getTotal() }}</h3>
   </div>
+
+  <button (click)="proceedToBuy()">proceed To Buy</button>
+  <a routerLink="/home">
+    <button >continue Shopping</button>
+  </a>
 }
 
 } @else {
   <div class="cart-empty-message">Your cart is empty.</div>
 }
+
+

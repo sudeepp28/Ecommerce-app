@@ -29,7 +29,7 @@ export class CartService {
     if (existingItem) {
       existingItem.quantity += 1;
     } else {
-      this.cartItems.push({ ...product, quantity: 1 });
+      this.cartItems.unshift({ ...product, quantity: 1 });
     }
 
     this.saveCartToLocalStorage();

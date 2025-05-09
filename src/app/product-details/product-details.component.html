@@ -9,7 +9,23 @@
         <h1>{{productDetails.model}}</h1>
       <p><strong>Specs:</strong> {{ productDetails.specs }}</p>
       <p><strong>Price:</strong> ₹{{ productDetails.price }}</p>
+
+      
    
+      <button
+      (click)="onShowFullSpec()" class="toggle-button" > {{ isFullSpec ? 'See Less Specifications' : 'See Full Specifications' }}</button>
+       <br>
+       <br>
+      @if(isFullSpec){
+        <div class="full-spec">
+         <h3>Full Specifications</h3>
+         <ul>
+          @for ( key of fullSpecKeys; track key) {
+        <li><strong>{{ key }} : </strong> {{ productDetails.fullSpecs[key] }}</li>
+      }
+         </ul>
+        </div>
+      }
 
     </div>
 </div>

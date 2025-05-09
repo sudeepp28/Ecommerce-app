@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from './cart.service';
+import { Router } from '@angular/router';
  // Import CartService
 
 @Component({
@@ -11,7 +12,7 @@ import { CartService } from './cart.service';
 export class CartComponent implements OnInit {
   cartItems: any[] = [];
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private router:Router) {}
 
   ngOnInit(): void {
     // Get the cart items from the service
@@ -36,4 +37,11 @@ export class CartComponent implements OnInit {
   }
   return total;
 }
+proceedToBuy(){
+  alert('proceeding to buy')
+}
+ clearCart(){
+  this.cartService.clearCart()
+  this.cartItems=[]
+ }
 }
