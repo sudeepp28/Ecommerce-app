@@ -76,7 +76,7 @@ export const Products = [
   "dimensions": "159.9 x 76.7 x 8.25 mm",
   "sim": "Dual SIM (nano‑SIM and eSIM)"
 },src:"assets/Mobile-assets/mobiles/apple/iphone 16 pro.png" },
-      { pid: 104, model: "iPhone 16 Pro Max", specs: "512 ", price: 135900,
+      { pid: 104, model: "iPhone 16 Pro Max", specs: "512GB ", price: 135900,
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
