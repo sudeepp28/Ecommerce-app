@@ -10,7 +10,19 @@
       <p><strong>Specs:</strong> {{ productDetails.specs }}</p>
       <p><strong>Price:</strong> ₹{{ productDetails.price }}</p>
 
-      
+     @if (colors) {
+  <div class="color_container">
+    @for (c of colors; track c) {
+      <div 
+        class="colors" 
+        [style.background]="c.code" 
+        [title]="c.name"
+        >
+      </div>
+    }
+  </div>
+}
+
    
       <button
       (click)="onShowFullSpec()" class="toggle-button" > {{ isFullSpec ? 'See Less Specifications' : 'See Full Specifications' }}</button>

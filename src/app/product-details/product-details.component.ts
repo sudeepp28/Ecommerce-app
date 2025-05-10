@@ -13,6 +13,8 @@ export class ProductDetailsComponent implements OnInit {
   productDetails: any = null;
   productId: number | null = null;
   productPid: number | null = null;
+  colors:any=null
+  color_code=null
   fullSpecKeys: string[] = [];
 private cartService= inject(CartService)
   constructor(private route: ActivatedRoute) {}
@@ -32,6 +34,17 @@ private cartService= inject(CartService)
       if (product.fullSpecs) {
         this.fullSpecKeys = Object.keys(product.fullSpecs);
       }
+      if (product.fullSpecs.colors && product.fullSpecs.color_code) {
+  this.colors = product.fullSpecs.colors.map((name: string, index: number) => ({
+    name,
+    code: product.fullSpecs.color_code[index]
+    
+  })
+);
+  
+}
+
+      
     } else {
       console.error('No product found with this PID:', this.productPid);
     }
@@ -53,5 +66,9 @@ private cartService= inject(CartService)
 
     
   }
+
+  
+
+  
 
 }

@@ -143,10 +143,31 @@
   padding: 6px 0;
   border-bottom: 1px solid #eee;
 }
-
 .spec-item:last-child {
   border-bottom: none;
 }
+.color_container {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.colors {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.colors:hover {
+  transform: scale(1.1);
+  border-color: #555;
+}
+
+
 
 .spec-key {
   font-weight: 500;
