@@ -2,7 +2,7 @@ export const Products = [
   {
     id: 1,
     iphone16: [
-      { pid: 101, model: "iPhone 16", specs: "128GB UltraMine", price: 67900, fullSpecs: {
+      { pid: 101, model: "iPhone 16", specs: "128GB ", price: 67900, fullSpecs: {
        " display": '6.1-inch OLED',
         "processor": 'A18 Bionic chip',
         "ram": '8 GB',
@@ -21,7 +21,7 @@ export const Products = [
         
         "colors": ['Black', 'Silver', 'UltraMine', 'Natural'],
       },src:"assets/Mobile-assets/mobiles/apple/iPhone16.jpg"},
-      { pid: 102, model: "iPhone 16 Plus", specs: "256GB, white", price: 77999,fullSpecs: {
+      { pid: 102, model: "iPhone 16 Plus", specs: "256GB", price: 77999,fullSpecs: {
     "display": "6.7 inch OLED, 2778 x 1284 pixels",
     "processor": "Apple A18 Bionic",
     "storage": "256GB",
@@ -61,7 +61,7 @@ export const Products = [
   "dimensions": "159.9 x 76.7 x 8.25 mm",
   "sim": "Dual SIM (nano‑SIM and eSIM)"
 },src:"assets/Mobile-assets/mobiles/apple/iphone 16 pro.png" },
-      { pid: 104, model: "iPhone 16 Pro Max", specs: "512, Desert Titanium", price: 135900,fullSpecs: {
+      { pid: 104, model: "iPhone 16 Pro Max", specs: "512 ", price: 135900,fullSpecs: {
   "display": "6.7 inch LTPO Super Retina XDR OLED, 2796 x 1290 pixels, 120Hz ProMotion",
   "processor": "Apple A18 Pro",
   "storage": "512GB",

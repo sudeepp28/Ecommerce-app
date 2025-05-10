@@ -17,7 +17,7 @@
         class="colors" 
         [style.background]="c.code" 
         [title]="c.name"
-        >
+        (click)="onSelectColor(c.name)">
       </div>
     }
   </div>

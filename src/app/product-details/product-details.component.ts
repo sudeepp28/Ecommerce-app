@@ -15,6 +15,7 @@ export class ProductDetailsComponent implements OnInit {
   productPid: number | null = null;
   colors:any=null
   color_code=null
+  selectedColor:string=""
   fullSpecKeys: string[] = [];
 private cartService= inject(CartService)
   constructor(private route: ActivatedRoute) {}
@@ -54,21 +55,29 @@ private cartService= inject(CartService)
 }
 
  addToCart():void{
-  if(this.productDetails){
-    this.cartService.addToCart(this.productDetails);
-    alert(`${this.productDetails.model} has been added to cart`)
+
+  if(this.selectedColor===""){
+    alert("please select a color")
+    return
   }
+  if (this.productDetails) {
+      const productWithColor = { ...this.productDetails, selectedColor: this.selectedColor };
+      this.cartService.addToCart(productWithColor);
+      alert(`${this.productDetails.model} in ${this.selectedColor} has been added to cart.`);
+    }
+  
  }
   isFullSpec=false
  
   onShowFullSpec(){
-    this.isFullSpec=!this.isFullSpec
-
-    
+    this.isFullSpec=!this.isFullSpec  
   }
 
   
-
+onSelectColor(color:string){
+  this.selectedColor=color
+  console.log(this.selectedColor)
+}
   
 
 }

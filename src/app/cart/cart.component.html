@@ -7,13 +7,17 @@
       <img [src]="item.src" alt="{{ item.model }}" />
       <div class="product-details">
         <h3>{{ item.model }}</h3>
-        <p>{{ item.specs }}</p>
+      
+
+        <p>{{ item.specs }}, <strong>
+          {{ item.selectedColor }}
+        </strong></p>
         <p class="price">Price: ₹{{ item.price }}</p>
         <p class="quantity">Quantity: {{ item.quantity }}</p>
 
         <button class="Q" (click)="decrease(item.pid)">−</button>
         <button class="Q" (click)="increase(item.pid)">+</button>
-        <button (click)="remove(item.pid)">Remove</button>
+        <button (click)="remove(item.pid)"><i class="fa-solid fa-trash"></i></button>
       </div>
     </div>
   }

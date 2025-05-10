@@ -24,12 +24,14 @@ export class CartService {
   }
 
   addToCart(product: any): void {
-    const existingItem = this.cartItems.find(item => item.pid === product.pid);
-
+    const existingItem = this.cartItems.find(item => item.pid === product.pid&& item.selectedColor===product.selectedColor);
+    
     if (existingItem) {
       existingItem.quantity += 1;
+      
     } else {
       this.cartItems.unshift({ ...product, quantity: 1 });
+      
     }
 
     this.saveCartToLocalStorage();
