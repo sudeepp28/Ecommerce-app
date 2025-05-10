@@ -10,6 +10,7 @@ import { CartService } from '../cart/cart.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
+ selectedStorage:any
   productDetails: any = null;
   productId: number | null = null;
   productPid: number | null = null;
@@ -31,11 +32,12 @@ private cartService= inject(CartService)
 
     if (product) {
       this.productDetails = product;
-
       if (product.fullSpecs) {
         this.fullSpecKeys = Object.keys(product.fullSpecs);
+        this.selectedStorage=product.storageOptions[0]
+        console.log(this.selectedStorage.size)
       }
-      if (product.fullSpecs.colors && product.fullSpecs.color_code) {
+      if(this.productDetails) if (product.fullSpecs.colors && product.fullSpecs.color_code) {
   this.colors = product.fullSpecs.colors.map((name: string, index: number) => ({
     name,
     code: product.fullSpecs.color_code[index]

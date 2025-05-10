@@ -4,12 +4,12 @@
     
     <img [src]="productDetails.src" alt="{{ productDetails.model }}" class="product-image" />
     <div class="product-specs">
-      <button class="buy product-button">Buy Now</button>
+   
       <button class="cart product-button" (click)="addToCart()">Add to  <i class="fa-solid fa-cart-shopping"></i> </button>
         <h1>{{productDetails.model}}</h1>
-      <p><strong>Specs:</strong> {{ productDetails.specs }}</p>
-      <p><strong>Price:</strong> ₹{{ productDetails.price }}</p>
-
+      <p><strong>Storage:</strong> {{productDetails.storageOptions[0].size}}</p>
+      <p><strong>Price:</strong> ₹{{ productDetails.storageOptions[0].price }}</p>
+      <p></p>
      @if (colors) {
   <div class="color_container">
     @for (c of colors; track c) {
