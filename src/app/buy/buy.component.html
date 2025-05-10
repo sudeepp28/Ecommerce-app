@@ -7,9 +7,11 @@
         <div class="order-items">
             <h3>{{item.model}}</h3>
         <img [src]="item.src" alt="">
-        <p>{{item.specs}}, <strong>{{ item.selectedColor }}</strong></p>
+       <div>
+         <p>{{item.specs}}, <strong>{{ item.selectedColor }}</strong></p>
         <p> <strong>Quantity:</strong> {{item.quantity}}</p>
         <p>Price: ₹{{ item.price }}</p>
+       </div>
         </div>
         
     }
