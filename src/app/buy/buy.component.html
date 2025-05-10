@@ -1,4 +1,7 @@
 <h2>Review Your Order</h2>
+<br><br>
+ <h3>Total Amount : {{totalAmount }}</h3>
+    <button class="cnfOrder" (click)="confirmOrder()" >Confirm order</button>
 
 @if(cartItems.length>0){
     
@@ -16,6 +19,5 @@
         
     }
 
-    <h3>Total Amount : {{totalAmount }}</h3>
-    <button class="cnfOrder" (click)="confirmOrder()" >Confirm order</button>
+   
 }
