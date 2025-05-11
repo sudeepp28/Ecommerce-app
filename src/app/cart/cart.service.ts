@@ -37,26 +37,24 @@ export class CartService {
     this.saveCartToLocalStorage();
   }
 
-  increaseQuantity(pid: number): void {
-    const item = this.cartItems.find(i => i.pid === pid);
+  increaseQuantity(pid: number,selectedStorage:{}): void {
+    const item = this.cartItems.find(i => i.pid === pid&& i.selectedStorage===selectedStorage);
     if (item) {
       item.quantity += 1;
       this.saveCartToLocalStorage();
     }
   }
 
-  decreaseQuantity(pid: number): void {
-    const item = this.cartItems.find(i => i.pid === pid);
+  decreaseQuantity(pid: number,selectedStorage:{}): void {
+    const item = this.cartItems.find(i => i.pid === pid&& i.selectedStorage===selectedStorage);
     if (item && item.quantity > 1) {
       item.quantity -= 1;
-    } else {
-      this.removeFromCart(pid);
     }
     this.saveCartToLocalStorage();
   }
 
-  removeFromCart(pid: number): void {
-    this.cartItems = this.cartItems.filter(item => item.pid !== pid);
+  removeFromCart(selectedStorage:{}): void {
+    this.cartItems = this.cartItems.filter(item =>   item.selectedStorage!==selectedStorage);
     this.saveCartToLocalStorage();
   }
 

@@ -18,16 +18,16 @@ export class CartComponent implements OnInit {
     // Get the cart items from the service
     this.cartItems = this.cartService.getCartItems();
   }
- increase(pid: number) {
-    this.cartService.increaseQuantity(pid);
+ increase(pid: number,selectedStorage:{}) {
+    this.cartService.increaseQuantity(pid,selectedStorage);
   }
 
-  decrease(pid: number) {
-    this.cartService.decreaseQuantity(pid);
+  decrease(pid: number,selectedStorage:{}) {
+    this.cartService.decreaseQuantity(pid,selectedStorage);
   }
   // Remove item from cart
-  remove(pid: number): void {
-    this.cartService.removeFromCart(pid);
+  remove(selectedStorage:{}): void {
+    this.cartService.removeFromCart(selectedStorage);
     this.cartItems = this.cartService.getCartItems();  // Update cart items after removal
   }
   getTotal(): number {

@@ -15,9 +15,9 @@
         <p class="price">Price: ₹{{ item.selectedStorage.price }}</p>
         <p class="quantity">Quantity: {{ item.quantity }}</p>
         
-        <button class="Q" (click)="decrease(item.pid)">−</button>
-        <button class="Q" (click)="increase(item.pid)">+</button>
-        <button (click)="remove(item.pid)"><i class="fa-solid fa-trash"></i></button>
+        <button class="Q" (click)="decrease(item.pid,item.selectedStorage)">−</button>
+        <button class="Q" (click)="increase(item.pid,item.selectedStorage)">+</button>
+        <button (click)="remove(item.selectedStorage)"><i class="fa-solid fa-trash"></i></button>
       </div>
     </div>
   }
