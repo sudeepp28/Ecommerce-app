@@ -17,8 +17,7 @@ import { MobileComponent } from "./Mobiles/mobile.component";
 import { ProductDetailsComponent } from "./Mobiles/product-details/product-details.component";
 import { CartComponent } from "./cart/cart.component";
 import { BUYComponent } from "./buy/buy.component";
-import { ApplianceBannersComponent } from "./Applances/appliance-banners/appliance-banners.component";
-import { ApplianceComponent } from "./Applances/appliance/appliance.component";
+
 
 
 
@@ -37,8 +36,7 @@ import { ApplianceComponent } from "./Applances/appliance/appliance.component";
         ProductDetailsComponent,
         CartComponent,
         BUYComponent,
-        ApplianceBannersComponent,
-    ApplianceComponent],
+       ],
     bootstrap:[AppComponent],
     imports: [FormsModule,
          BrowserModule,

@@ -7,8 +7,7 @@ import { ProductPageComponent } from './Mobiles/product-page/product-page.compon
 import { ProductDetailsComponent } from './Mobiles/product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
 import { BUYComponent } from './buy/buy.component';
-import { ApplianceComponent } from './Applances/appliance/appliance.component';
-import { ApplianceProductPageComponent } from './Applances/appliance-product-page/appliance-product-page.component';
+
 
 
 const routes: Routes = [
@@ -19,8 +18,7 @@ const routes: Routes = [
   { path: 'product-details/:id/:pid', component: ProductDetailsComponent },
   {path:'cart',component:CartComponent},
   {path:'buy',component:BUYComponent},
-  {path:'appliances', component:ApplianceComponent},
-  {path:'Appliance-product/:id', component:ApplianceProductPageComponent} // <-- new route
+  // <-- new route
 ];
 
 @NgModule({
