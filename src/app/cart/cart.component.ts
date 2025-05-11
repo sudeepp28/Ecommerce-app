@@ -26,8 +26,8 @@ export class CartComponent implements OnInit {
     this.cartService.decreaseQuantity(pid,selectedColor,selectedStorage);
   }
   // Remove item from cart
-  remove(selectedStorage:{}): void {
-    this.cartService.removeFromCart(selectedStorage);
+  remove(selectedColor:string,selectedStorage:{}): void {
+    this.cartService.removeFromCart(selectedColor,selectedStorage);
     this.cartItems = this.cartService.getCartItems();  // Update cart items after removal
   }
   getTotal(): number {

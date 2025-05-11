@@ -53,9 +53,16 @@ export class CartService {
     this.saveCartToLocalStorage();
   }
 
-  removeFromCart(selectedStorage:{}): void {
-    this.cartItems = this.cartItems.filter(item =>   item.selectedStorage!==selectedStorage);
-    this.saveCartToLocalStorage();
+  removeFromCart(selectedColor:string,selectedStorage:{}): void {
+    const Index = this.cartItems.findIndex(item =>   item.selectedStorage===selectedStorage && item.selectedColor===selectedColor
+    );
+
+    if(Index>-1)
+{
+  this.cartItems.splice(Index,1);
+
+   this.saveCartToLocalStorage();
+}   
   }
 
   clearCart(): void {
