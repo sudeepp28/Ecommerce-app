@@ -2,7 +2,7 @@ export const Products = [
   {
     id: 1,
     iphone16: [
-      { pid: 101, model: "iPhone 16", specs: "128GB ", price: 67900,
+      { pid: 101, model: "iPhone 16", 
         storageOptions: [
       { size: '128GB', price: 69999 },
       { size: '256GB', price: 79999 },
@@ -26,11 +26,11 @@ export const Products = [
         
         "colors": ['Black', 'Silver', 'UltraMine', 'Natural'],
       },src:"assets/Mobile-assets/mobiles/apple/iPhone16.jpg"},
-      { pid: 102, model: "iPhone 16 Plus", specs: "256GB", price: 77999,
+      { pid: 102, model: "iPhone 16 Plus",
          storageOptions: [
-      { size: '128GB', price: 69999 },
-      { size: '256GB', price: 79999 },
-      { size: '512GB', price: 94999 }
+      { size: '128GB', price: 79999 },
+      { size: '256GB', price: 89999 },
+      { size: '512GB', price: 99999 }
     ],fullSpecs: {
     "display": "6.7 inch OLED, 2778 x 1284 pixels",
     "processor": "Apple A18 Bionic",
@@ -51,7 +51,7 @@ export const Products = [
     "dimensions": "160.8 x 78.1 x 7.8 mm",
     "sim": "Dual SIM (nano‑SIM and eSIM)"
   },src:"assets/Mobile-assets/mobiles/apple/iphone16plus.jpg " },
-      { pid: 103, model: "iPhone 16 Pro", specs: "256GB, Natural Titanium", price: 112900,
+      { pid: 103, model: "iPhone 16 Pro",
          storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -76,7 +76,7 @@ export const Products = [
   "dimensions": "159.9 x 76.7 x 8.25 mm",
   "sim": "Dual SIM (nano‑SIM and eSIM)"
 },src:"assets/Mobile-assets/mobiles/apple/iphone 16 pro.png" },
-      { pid: 104, model: "iPhone 16 Pro Max", specs: "512GB ", price: 135900,
+      { pid: 104, model: "iPhone 16 Pro Max",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -106,7 +106,7 @@ export const Products = [
   {
     id: 2,
     samsungGalaxyS25: [
-      { pid: 201, model: "Galaxy S25", specs: "8GB RAM, 128GB", price: 74999,
+      { pid: 201, model: "Galaxy S25",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -128,7 +128,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/samsung/SamsungG S25.png"},
-      { pid: 202, model: "Galaxy S25+", specs: "12GB RAM, 256GB", price: 89999,
+      { pid: 202, model: "Galaxy S25+",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -150,7 +150,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/samsung/SamsungG S25.png" },
-      { pid: 203, model: "Galaxy S25 Ultra", specs: "16GB RAM, 512GB", price: 119999,
+      { pid: 203, model: "Galaxy S25 Ultra",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -172,7 +172,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/samsung/SamsungG S25.png" },
-      { pid: 204, model: "Galaxy S25 FE", specs: "6GB RAM, 128GB", price: 64999,
+      { pid: 204, model: "Galaxy S25 FE",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -199,7 +199,7 @@ export const Products = [
   {
     id: 3,
     oneplus: [
-      { pid: 301, model: "OnePlus 13", specs: "8GB RAM, 128GB", price: 79999,
+      { pid: 301, model: "OnePlus 13",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -221,7 +221,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/OnePlus/OnePlus 13.jpg" },
-      { pid: 302, model: "OnePlus 13R", specs: "12GB RAM, 256GB", price: 43999,
+      { pid: 302, model: "OnePlus 13R", 
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -243,7 +243,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/OnePlus/OnePlus 13r.jpg" },
-      { pid: 303, model: "OnePlus 12 ", specs: "16GB RAM, 512GB", price: 51422,
+      { pid: 303, model: "OnePlus 12 ", 
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -265,7 +265,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/OnePlus/OnePlus 12.jpg"},
-      { pid: 304, model: "OnePlus 13 Lite", specs: "6GB RAM, 128GB", price: 58999,
+      { pid: 304, model: "OnePlus 13 Lite", 
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -292,7 +292,7 @@ export const Products = [
   {
     id: 4,
     macbook: [
-      { pid: 401, model: "MacBook Air Apple M4", specs: "8GB RAM, 256GB SSD", price: 99900,
+      { pid: 401, model: "MacBook Air Apple M4",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -315,7 +315,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 }, src:"assets/Mobile-assets/mobiles/macbook/Macbook Air M4.png" },
-      { pid: 402, model: "MacBook Air Apple M2", specs: "16GB RAM, 512GB SSD", price: 82990,
+      { pid: 402, model: "MacBook Air Apple M2",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -337,7 +337,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 }, src:"assets/Mobile-assets/mobiles/macbook/Macbook Air M4.png" },
-      { pid: 403, model: "MacBook Air Apple M1", specs: "8GB RAM, 256GB SSD", price: 59990,
+      { pid: 403, model: "MacBook Air Apple M1",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -359,7 +359,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 }, src:"assets/Mobile-assets/mobiles/macbook/Macbook Air M4.png" },
-      { pid: 404, model: "MacBook Air Apple M3 ", specs: "8GB RAM, 512GB SSD", price: 97990,
+      { pid: 404, model: "MacBook Air Apple M3 ",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -386,7 +386,7 @@ export const Products = [
   {
     id: 5,
     ipad: [
-      { pid: 501, model: "iPad Mini", specs: "64GB, WiFi", price: 47999 ,
+      { pid: 501, model: "iPad Mini",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -408,7 +408,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/iPad/iPad Mini.png" },
-      { pid: 502, model: "iPad Air(M3)", specs: "256GB, WiFi + 5G", price: 104900,
+      { pid: 502, model: "iPad Air(M3)",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -430,7 +430,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/iPad/iPad Air (M3).jpg" },
-      { pid: 503, model: "iPad Air(m3)", specs: "64GB, Space Grey wifi Only", price: 79999,
+      { pid: 503, model: "iPad Air(m3)",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -452,7 +452,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/iPad/iPad Air (M3).jpg"},
-      { pid: 504, model: "iPad Air(M2)", specs: "256GB, Silver Wifi +5G", price: 91900,
+      { pid: 504, model: "iPad Air(M2)", 
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -479,7 +479,7 @@ export const Products = [
   {
     id: 6,
     sonyXperia: [
-      { pid: 601, model: "Sony Xperia XA1", specs: "4GB RAM, 328GB", price: 19999,
+      { pid: 601, model: "Sony Xperia XA1",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -501,7 +501,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/Sony/sony-xperia-xa1.jpg" },
-      { pid: 602, model: "Sony Xperia XZ", specs: "4GB RAM, 128GB", price: 49990,
+      { pid: 602, model: "Sony Xperia XZ",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -523,7 +523,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/Sony/sony-xperia-xz.jpg" },
-      { pid: 603, model: "Sony Xperia XZ2", specs: "6GB RAM, 64GB", price: 74999 ,
+      { pid: 603, model: "Sony Xperia XZ2", 
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -545,7 +545,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/Sony/sony-xperia-xz2.jpg"},
-      { pid: 604, model: "Sony Xperia Pro", specs: "4GB RAM, 64GB", price: 29999,
+      { pid: 604, model: "Sony Xperia Pro", 
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -572,7 +572,7 @@ export const Products = [
   {
     id: 7,
     googlePixel: [
-      { pid: 701, model: "Google Pixel 7a", specs: "128GB, Coral", price: 43999,
+      { pid: 701, model: "Google Pixel 7a", 
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -594,7 +594,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/google Pixel/pixel 7a.jpg" },
-      { pid: 702, model: "Google Pixel 7", specs: "256GB, Cloudy White", price: 29999,
+      { pid: 702, model: "Google Pixel 7", 
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -616,7 +616,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/google Pixel/pixel7.jpg"  },
-      { pid: 703, model: "Google Pixel 8", specs: "256GB, Wintergreen", price:75999,
+      { pid: 703, model: "Google Pixel 8", 
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -638,7 +638,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/google Pixel/pixel8.jpg" },
-      { pid: 704, model: "Google Pixel 9", specs: "128GB, Hazle", price: 74999,
+      { pid: 704, model: "Google Pixel 9", 
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -665,7 +665,7 @@ export const Products = [
   {
     id: 8,
     Realme: [
-      { pid: 801, model: "realme 14 Pro+5G", specs: "8GB RAM, 128GB Pearl white" , price: 31999,
+      { pid: 801, model: "realme 14 Pro+5G", 
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -687,7 +687,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/Realme/realme 14Pro.jpg" },
-      { pid: 802, model: "realme 13 pro+5G", specs: "8GB RAM, 256GB Monet", price: 26999,
+      { pid: 802, model: "realme 13 pro+5G",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -709,7 +709,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/Realme/realme 13.jpg" },
-      { pid: 803, model: "realme 14 x 5G", specs: "6GB RAM, 128GB Jewel Red", price: 14999,
+      { pid: 803, model: "realme 14 x 5G",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -731,7 +731,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/Realme/realme14.jpg" },
-      { pid: 804, model: "realme P3", specs: "8GB RAM, 128GB", price: 19999,
+      { pid: 804, model: "realme P3", 
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -754,7 +754,7 @@ export const Products = [
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/Realme/realme p3.jpg" },
       {
-        pid:805, model:"realme C75",specs:"4GB Ram 128GB Lily White",price:12999,
+        pid:805, model:"realme C75",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -782,7 +782,7 @@ export const Products = [
   {
     id: 9,
     IQOO: [
-      { pid: 901, model: "IQOO Neo 10R 5G", specs: "12GB RAM, 256GB MoonKnight Titan", price: 35999,
+      { pid: 901, model: "IQOO Neo 10R 5G",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -804,7 +804,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/IQOO/neo-10r.jpg"},
-      { pid: 902, model: "IQOO Z9 Lite 5G", specs: "4GB RAM, 128GB Mocha Brown", price: 14499,
+      { pid: 902, model: "IQOO Z9 Lite 5G",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -826,7 +826,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 }, src:"assets/Mobile-assets/mobiles/IQOO/iQOO-z9-lite.jpg" },
-      { pid: 903, model: "IQOO 13 5G", specs: "12GB RAM, 256GB Legend", price: 61999,
+      { pid: 903, model: "IQOO 13 5G", 
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },
@@ -848,7 +848,7 @@ export const Products = [
   color_code:['#1d1d1d','#fff5e1','#3d7a3b','#b97fe5'],
   colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
 },src:"assets/Mobile-assets/mobiles/IQOO/iqoo-13-5g.jpg" },
-      { pid: 904, model: "IQOO Z10X 5G", specs: "8GB RAM, 256GB Titanium", price: 19999 ,
+      { pid: 904, model: "IQOO Z10X 5G",
         storageOptions: [
       { size: '256GB', price: 112900 },
       { size: '512GB', price: 122900 },

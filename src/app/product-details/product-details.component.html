@@ -7,9 +7,20 @@
    
       <button class="cart product-button" (click)="addToCart()">Add to  <i class="fa-solid fa-cart-shopping"></i> </button>
         <h1>{{productDetails.model}}</h1>
-      <p><strong>Storage:</strong> {{productDetails.specs}}</p>
-      <p><strong>Price:</strong> ₹{{ productDetails.price }}</p>
-      <p></p>
+      <p><strong>Storage:</strong>
+         <select class="storage" name="Storage" id="storage" [(ngModel)]="selectedstorage">
+        @for(option of productDetails.storageOptions;track option){
+          <option [ngValue]="option">{{option.size}}</option>
+        }
+      </select></p>
+      <p><strong>Price:</strong>  @if(selectedstorage){
+        
+          ₹{{selectedstorage.price}}
+        
+      }</p>
+      
+     
+
      @if (colors) {
   <div class="color_container">
     @for (c of colors; track c) {

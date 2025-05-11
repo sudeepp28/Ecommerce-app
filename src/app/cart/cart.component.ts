@@ -33,7 +33,7 @@ export class CartComponent implements OnInit {
   getTotal(): number {
   let total = 0;
   for (let item of this.cartItems) {
-    total += item.price * item.quantity;
+    total += item.selectedStorage.price* item.quantity;
   }
   return total;
 }

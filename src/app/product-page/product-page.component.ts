@@ -19,7 +19,7 @@ export class ProductPageComponent implements OnInit {
     const idParam = this.route.snapshot.paramMap.get('id');
     this.selectedProductId = idParam ? parseInt(idParam, 10) : null; // <-- Store the ID
 
-    console.log('Selected Product ID:', this.selectedProductId);
+   
 
     if (this.selectedProductId !== null) {
       const matchedProduct = Products.find(product => product.id === this.selectedProductId);

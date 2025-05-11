@@ -9,12 +9,12 @@
         <h3>{{ item.model }}</h3>
       
 
-        <p>{{ item.specs }}, <strong>
+        <p>{{ item.selectedStorage.size }}, <strong>
           {{ item.selectedColor }}
         </strong></p>
-        <p class="price">Price: ₹{{ item.price }}</p>
+        <p class="price">Price: ₹{{ item.selectedStorage.price }}</p>
         <p class="quantity">Quantity: {{ item.quantity }}</p>
-
+        
         <button class="Q" (click)="decrease(item.pid)">−</button>
         <button class="Q" (click)="increase(item.pid)">+</button>
         <button (click)="remove(item.pid)"><i class="fa-solid fa-trash"></i></button>

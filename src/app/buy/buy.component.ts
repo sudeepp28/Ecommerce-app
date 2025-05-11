@@ -20,7 +20,7 @@ export class BUYComponent {
   }
   calculateTotal(): void {
   this.totalAmount = this.cartItems.reduce((acc, item) => {
-     return acc + (item.price * (item.quantity || 1));
+     return acc + (item.selectedStorage.price * (item.quantity || 1));
   }, 0);
 }
 

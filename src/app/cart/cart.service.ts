@@ -24,7 +24,7 @@ export class CartService {
   }
 
   addToCart(product: any): void {
-    const existingItem = this.cartItems.find(item => item.pid === product.pid&& item.selectedColor===product.selectedColor);
+    const existingItem = this.cartItems.find(item => item.pid === product.pid&& item.selectedColor===product.selectedColor && item.selectedStorage===product.selectedStorage);
     
     if (existingItem) {
       existingItem.quantity += 1;
