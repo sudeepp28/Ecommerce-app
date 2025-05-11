@@ -37,16 +37,16 @@ export class CartService {
     this.saveCartToLocalStorage();
   }
 
-  increaseQuantity(pid: number,selectedStorage:{}): void {
-    const item = this.cartItems.find(i => i.pid === pid&& i.selectedStorage===selectedStorage);
+  increaseQuantity(pid: number,selectedColor:string,selectedStorage:{}): void {
+    const item = this.cartItems.find(i => i.pid === pid&& i.selectedStorage===selectedStorage&& i.selectedColor===selectedColor);
     if (item) {
       item.quantity += 1;
       this.saveCartToLocalStorage();
     }
   }
 
-  decreaseQuantity(pid: number,selectedStorage:{}): void {
-    const item = this.cartItems.find(i => i.pid === pid&& i.selectedStorage===selectedStorage);
+  decreaseQuantity(pid: number,selectedColor:string,selectedStorage:{}): void {
+    const item = this.cartItems.find(i => i.pid === pid&& i.selectedStorage===selectedStorage&& i.selectedColor===selectedColor);
     if (item && item.quantity > 1) {
       item.quantity -= 1;
     }

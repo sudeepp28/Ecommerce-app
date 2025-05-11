@@ -18,12 +18,12 @@ export class CartComponent implements OnInit {
     // Get the cart items from the service
     this.cartItems = this.cartService.getCartItems();
   }
- increase(pid: number,selectedStorage:{}) {
-    this.cartService.increaseQuantity(pid,selectedStorage);
+ increase(pid: number,selectedColor:string,selectedStorage:{},) {
+    this.cartService.increaseQuantity(pid,selectedColor,selectedStorage);
   }
 
-  decrease(pid: number,selectedStorage:{}) {
-    this.cartService.decreaseQuantity(pid,selectedStorage);
+  decrease(pid: number,selectedColor:string,selectedStorage:{}) {
+    this.cartService.decreaseQuantity(pid,selectedColor,selectedStorage);
   }
   // Remove item from cart
   remove(selectedStorage:{}): void {
