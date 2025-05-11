@@ -18,7 +18,7 @@ export class ProductChartComponent {
   },
   {src:'assets/product-chart/appliances.webp',
     span:'Appliances',
-    link:""
+    link:"/appliance"
   },
   {src:'assets/product-chart/electronics.webp',
     span:'Electronics',

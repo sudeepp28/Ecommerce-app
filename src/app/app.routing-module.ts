@@ -7,6 +7,7 @@ import { ProductPageComponent } from './Mobiles/product-page/product-page.compon
 import { ProductDetailsComponent } from './Mobiles/product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
 import { BUYComponent } from './buy/buy.component';
+import { AppliancesComponent } from './appliances/appliances.component';
 
 
 
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'product-details/:id/:pid', component: ProductDetailsComponent },
   {path:'cart',component:CartComponent},
   {path:'buy',component:BUYComponent},
+  {path:'appliance', component:AppliancesComponent}
   // <-- new route
 ];
 
