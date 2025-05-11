@@ -1,0 +1,16 @@
+<h2>{{selectedProductName}}</h2>
+
+@if(selectedProductList.length > 0){
+  <div class="product-grid">
+    @for(product of selectedProductList; track product){
+      <div class="product-card">
+        <img [src]="product.src" [alt]="product.alt">
+        <p class="product-name">{{product.Product_name}}</p>
+        <p class="product-id">ID: {{product.pid}}</p>
+      </div>
+    }
+  </div>
+}
+ @else {
+  <p>No products available.</p>
+}

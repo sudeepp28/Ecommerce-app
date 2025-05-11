@@ -3,11 +3,13 @@
       @for (banner of ABanners; track banner) {
        
          
-           <div >
+         <a [routerLink]="['/appliance-product', banner.id]">
+              <div >
             <img [src]="banner.src" [alt]="banner.alt">
             <p>{{banner.Product_name}}</p>
             <p>id : {{banner.id}}</p>
           </div>
+         </a>
         
      
       }
