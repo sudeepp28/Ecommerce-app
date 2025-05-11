@@ -19,13 +19,13 @@ export class MFlexBoardComponent {
     },
     {
       id: 2,
-      src: "assets/Mobile-assets/MBanner2.png",
+      src: "assets/Mobile-assets/MBanner2.jpeg",
       alt: "MBanner2",
       link: ''
     },
     {
       id: 3,
-      src: "assets/Mobile-assets/MBanner3.png",
+      src: "assets/Mobile-assets/MBanner3.jpeg",
       alt: "MBanner3",
       link: ''
     }

@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Products } from '../Mobile_product-details';  // Your product list
-import { CartService } from '../cart/cart.service';
+import { CartService } from '../../cart/cart.service';
 
 @Component({
   selector: 'app-product-details',

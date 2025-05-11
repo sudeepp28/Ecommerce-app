@@ -49,12 +49,14 @@ export class CartService {
     const item = this.cartItems.find(i => i.pid === pid&& i.selectedStorage===selectedStorage&& i.selectedColor===selectedColor);
     if (item && item.quantity > 1) {
       item.quantity -= 1;
+
     }
+   
     this.saveCartToLocalStorage();
   }
 
-  removeFromCart(selectedColor:string,selectedStorage:{}): void {
-    const Index = this.cartItems.findIndex(item =>   item.selectedStorage===selectedStorage && item.selectedColor===selectedColor
+  removeFromCart(pid:number,selectedColor:string,selectedStorage:{}): void {
+    const Index = this.cartItems.findIndex(item =>   item.pid===pid&&item.selectedStorage===selectedStorage && item.selectedColor===selectedColor
     );
 
     if(Index>-1)

@@ -1,7 +1,7 @@
 export const Products = [
   {
     id: 1,
-    iphone16: [
+    iPhone16: [
       { pid: 101, model: "iPhone 16", 
         storageOptions: [
       { size: '128GB', price: 69999 },
@@ -105,7 +105,7 @@ export const Products = [
   },
   {
     id: 2,
-    samsungGalaxyS25: [
+    "Samsung Galaxy S25": [
       { pid: 201, model: "Galaxy S25",
         storageOptions: [
       { size: '256GB', price: 112900 },
@@ -198,7 +198,7 @@ export const Products = [
   },
   {
     id: 3,
-    oneplus: [
+    Oneplus: [
       { pid: 301, model: "OnePlus 13",
         storageOptions: [
       { size: '256GB', price: 112900 },
@@ -291,7 +291,7 @@ export const Products = [
   },
   {
     id: 4,
-    macbook: [
+    Macbook: [
       { pid: 401, model: "MacBook Air Apple M4",
         storageOptions: [
       { size: '256GB', price: 112900 },
@@ -385,7 +385,7 @@ export const Products = [
   },
   {
     id: 5,
-    ipad: [
+    iPad: [
       { pid: 501, model: "iPad Mini",
         storageOptions: [
       { size: '256GB', price: 112900 },
@@ -478,7 +478,7 @@ export const Products = [
   },
   {
     id: 6,
-    sonyXperia: [
+    "Sony Xperia": [
       { pid: 601, model: "Sony Xperia XA1",
         storageOptions: [
       { size: '256GB', price: 112900 },
@@ -571,7 +571,7 @@ export const Products = [
   },
   {
     id: 7,
-    googlePixel: [
+    "Google Pixel": [
       { pid: 701, model: "Google Pixel 7a", 
         storageOptions: [
       { size: '256GB', price: 112900 },

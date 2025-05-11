@@ -12,9 +12,9 @@ import { AppRoutingModule } from "./app.routing-module";
 import { HomeComponent } from "./home/home/home.component";
 import { MFlexBoardComponent } from "./Mobiles/mflex-board/mflex-board.component";
 import { MobilesContainerComponent } from "./Mobiles/mobiles-container/mobiles-container.component";
-import { ProductPageComponent } from "./product-page/product-page.component";
+import { ProductPageComponent } from "./Mobiles/product-page/product-page.component";
 import { MobileComponent } from "./Mobiles/mobile.component";
-import { ProductDetailsComponent } from "./product-details/product-details.component";
+import { ProductDetailsComponent } from "./Mobiles/product-details/product-details.component";
 import { CartComponent } from "./cart/cart.component";
 import { BUYComponent } from "./buy/buy.component";
 
