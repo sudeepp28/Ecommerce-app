@@ -52,6 +52,13 @@ export class CartComponent implements OnInit {
     this.loadCartItems();
   }
 
+  // Furniture increase
+
+   fincrease(pid: number): void {
+    this.cartService.fincreaseQuantity(pid);
+    this.loadCartItems();
+  }
+
   // Appliance decrease
   Adecrease(pid: number): void {
     this.cartService. AdecreaseQuantity(pid);
@@ -62,7 +69,12 @@ export class CartComponent implements OnInit {
     this.cartService.TdecreaseQuantity(pid);
     this.loadCartItems();
   }
+// Furniture decrease
 
+ fdecrease(pid: number): void {
+    this.cartService.fdecreaseQuantity(pid);
+    this.loadCartItems();
+  }
   // Appliance remove
   Aremove(pid: number): void {
     this.cartService.AremoveFromCart(pid);
@@ -74,6 +86,12 @@ export class CartComponent implements OnInit {
     this.loadCartItems();
   }
 
+  // Furniture Remove
+
+   fremove(pid: number): void {
+    this.cartService.fremoveFromCart(pid);
+    this.loadCartItems();
+  }
   // Calculate total
   getTotal(): number {
     let total = 0;

@@ -73,6 +73,22 @@ export class CartService {
 
     this.saveCartToLocalStorage();
   }
+  // Add Furniture to cart
+
+  FurnitureAddToCart(product: any): void {
+    const existingItem = this.cartItems.find(item =>
+      item.type === 'furniture' &&
+      item.pid === product.pid
+    );
+
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      this.cartItems.unshift({ ...product, quantity: 1, type: 'furniture' });
+    }
+
+    this.saveCartToLocalStorage();
+  }
 
   // Mobile Quantity +1
   increaseQuantity(pid: number, selectedColor: string, selectedStorage: {}): void {
@@ -145,6 +161,19 @@ export class CartService {
       this.saveCartToLocalStorage();
     }
   }
+  //furniture Quantity+1
+
+   fincreaseQuantity(pid: number): void {
+    const item = this.cartItems.find(i =>
+      i.type === 'furniture' &&
+      i.pid === pid
+    );
+
+    if (item) {
+      item.quantity += 1;
+      this.saveCartToLocalStorage();
+    }
+  }
 
   // Appliance Quantity -1
   AdecreaseQuantity(pid: number): void {
@@ -173,6 +202,20 @@ export class CartService {
     }
   }
 
+  // Furniture Quantity-1
+
+   fdecreaseQuantity(pid: number): void {
+    const item = this.cartItems.find(i =>
+      i.type === 'furniture' &&
+      i.pid === pid
+    );
+
+    if (item && item.quantity > 1) {
+      item.quantity -= 1;
+      this.saveCartToLocalStorage();
+    }
+  }
+
   // Remove Appliance from Cart
   AremoveFromCart(pid: number): void {
     const index = this.cartItems.findIndex(item =>
@@ -190,6 +233,20 @@ export class CartService {
   TremoveFromCart(pid: number): void {
     const index = this.cartItems.findIndex(item =>
       item.type === 'toys' &&
+      item.pid === pid
+    );
+
+    if (index > -1) {
+      this.cartItems.splice(index, 1);
+      this.saveCartToLocalStorage();
+    }
+  }
+
+  // Remove Furniture  from Cart
+
+   fremoveFromCart(pid: number): void {
+    const index = this.cartItems.findIndex(item =>
+      item.type === 'furniture' &&
       item.pid === pid
     );
 

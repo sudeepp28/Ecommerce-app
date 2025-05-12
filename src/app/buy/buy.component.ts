@@ -28,6 +28,9 @@ export class BUYComponent implements OnInit {
       } else if(item.type==='toys'){
          return acc + (item.price * (item.quantity || 1));
       }
+      else if(item.type==='furniture'){
+        return acc + (item.price * (item.quantity || 1));
+      }
        else {
         return acc; // fallback for unknown item types
       }

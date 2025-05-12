@@ -27,6 +27,11 @@
           <p>Price: ₹{{ item.price }}</p>
         </div>
       }
+      @else if(item.type==='furniture'){
+        <p><strong>Quantity:</strong> {{ item.quantity }}</p>
+          <p>Price: ₹{{ item.price }}</p>
+      }
+
     </div>
   }
 } @else {

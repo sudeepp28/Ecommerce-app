@@ -25,6 +25,10 @@ import { ToysComponent } from "./toys/toys.component";
 import { ToysBannerComponent } from "./toys/toys-banner/toys-banner.component";
 import { ToysPageComponent } from "./toys/toys-page/toys-page.component";
 import { ToysProductDetailsComponent } from "./toys/toys-product-details/toys-product-details.component";
+import { FurnitureComponent } from "./furniture/furniture.component";
+import { FunitureBannersComponent } from "./furniture/funiture-banners/funiture-banners.component";
+import { FurniturePageComponent } from "./furniture/furniture-page/furniture-page.component";
+import { FurnitureDetailsComponent } from "./furniture/furniture-details/furniture-details.component";
 
 
 
@@ -51,7 +55,11 @@ import { ToysProductDetailsComponent } from "./toys/toys-product-details/toys-pr
         ToysComponent,
         ToysBannerComponent,
         ToysPageComponent,
-        ToysProductDetailsComponent
+        ToysProductDetailsComponent,
+        FurnitureComponent,
+        FunitureBannersComponent,
+        FurniturePageComponent,
+        FurnitureDetailsComponent
        ],
     bootstrap:[AppComponent],
     imports: [FormsModule,

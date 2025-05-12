@@ -26,7 +26,7 @@ export class ProductChartComponent {
   },
   
   {src:'assets/product-chart/beauty.webp',
-    span:'Beauty And Books',
+    span:'Beauty',
     link:""
 
   },
@@ -36,7 +36,7 @@ export class ProductChartComponent {
   },
   {src:'assets/product-chart/furniture.webp',
     span:'Furniture',
-    link:""
+    link:"/furniture"
   },
   {src:'assets/product-chart/grocery.webp',
     span:'Grocery',
