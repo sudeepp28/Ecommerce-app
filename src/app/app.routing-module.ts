@@ -8,8 +8,8 @@ import { ProductDetailsComponent } from './Mobiles/product-details/product-detai
 import { CartComponent } from './cart/cart.component';
 import { BUYComponent } from './buy/buy.component';
 import { AppliancesComponent } from './appliances/appliances.component';
-import { ApplianceBannersComponent } from './appliances/appliance-banners/appliance-banners.component';
 import { ApplianceProductPageComponent } from './appliances/appliance-product-page/appliance-product-page.component';
+import { ApplianceProductDetailsComponent } from './appliances/appliance-product-details/appliance-product-details.component';
 
 
 
@@ -22,7 +22,8 @@ const routes: Routes = [
   {path:'cart',component:CartComponent},
   {path:'buy',component:BUYComponent},
   {path:'appliance', component:AppliancesComponent},
-  {path:'appliance-product/:id',component:ApplianceProductPageComponent}
+  {path:'appliance-product/:id',component:ApplianceProductPageComponent},
+  {path:'appliance-product/:id/:pid',component:ApplianceProductDetailsComponent}
   // <-- new route
 ];
 

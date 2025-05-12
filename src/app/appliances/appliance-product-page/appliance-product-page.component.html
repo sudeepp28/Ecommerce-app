@@ -3,11 +3,14 @@
 @if(selectedProductList.length > 0){
   <div class="product-grid">
     @for(product of selectedProductList; track product){
-      <div class="product-card">
+     
+      <a [routerLink]="['/appliance-product',selectedProductId,product.pid]">
+         <div class="product-card">
         <img [src]="product.src" [alt]="product.alt">
         <p class="product-name">{{product.Product_name}}</p>
-        <p class="product-id">ID: {{product.pid}}</p>
+        <p class="product-id">Price:  ₹{{product.price}}</p>
       </div>
+      </a>
     }
   </div>
 }

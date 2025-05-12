@@ -66,7 +66,7 @@ if (product.fullSpecs.colors && product.fullSpecs.color_code) {
   }
   if (this.productDetails) {
       const productWithColor = { ...this.productDetails, selectedColor: this.selectedColor, selectedStorage:this.selectedstorage};
-      this.cartService.addToCart(productWithColor);
+      this.cartService.MobileaddToCart(productWithColor);
       alert(`${this.productDetails.model} in ${this.selectedColor} and storage :  ${this.selectedstorage.size} has been added to cart.`);
     }
   

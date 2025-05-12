@@ -20,6 +20,7 @@ import { BUYComponent } from "./buy/buy.component";
 import { AppliancesComponent } from "./appliances/appliances.component";
 import { ApplianceBannersComponent } from "./appliances/appliance-banners/appliance-banners.component";
 import { ApplianceProductPageComponent } from "./appliances/appliance-product-page/appliance-product-page.component";
+import { ApplianceProductDetailsComponent } from "./appliances/appliance-product-details/appliance-product-details.component";
 
 
 
@@ -41,7 +42,8 @@ import { ApplianceProductPageComponent } from "./appliances/appliance-product-pa
         BUYComponent,
         AppliancesComponent,
         ApplianceBannersComponent,
-        ApplianceProductPageComponent
+        ApplianceProductPageComponent,
+        ApplianceProductDetailsComponent
        ],
     bootstrap:[AppComponent],
     imports: [FormsModule,

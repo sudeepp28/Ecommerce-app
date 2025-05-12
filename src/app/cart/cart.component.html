@@ -1,39 +1,48 @@
 <h2>Cart</h2>
 
 @if (cartItems.length > 0) {
-  <button (click)=" clearCart()">clear Cart</button>
+  <button (click)="clearCart()">Clear Cart</button>
+
   @for (item of cartItems; track item.pid) {
     <div class="cart-item">
-      <img [src]="item.src" alt="{{ item.model }}" />
+      <img [src]="item.src" alt="{{ item.model || item.Product_name }}" />
       <div class="product-details">
-        <h3>{{ item.model }}</h3>
-      
 
-        <p>{{ item.selectedStorage.size }}, <strong>
-          {{ item.selectedColor }}
-        </strong></p>
-        <p class="price">Price: ₹{{ item.selectedStorage.price }}</p>
-        <p class="quantity">Quantity: {{ item.quantity }}</p>
-        
-        <button class="Q" (click)="decrease(item.pid,item.selectedColor,item.selectedStorage)">−</button>
-        <button class="Q" (click)="increase(item.pid,item.selectedColor,item.selectedStorage)">+</button>
-        <button (click)="remove(item.pid,item.selectedColor,item.selectedStorage)"><i class="fa-solid fa-trash"></i></button>
+        <h3>{{ item.model || item.Product_name }}</h3>
+
+        @if (item.type === 'mobile') {
+          <p>{{ item.selectedStorage.size }}, <strong>{{ item.selectedColor }}</strong></p>
+          <p class="price">Price: ₹{{ item.selectedStorage.price }}</p>
+          <p class="quantity">Quantity: {{ item.quantity }}</p>
+
+          <button class="Q" (click)="decrease(item.pid, item.selectedColor, item.selectedStorage)">−</button>
+          <button class="Q" (click)="increase(item.pid, item.selectedColor, item.selectedStorage)">+</button>
+          <button (click)="remove(item.pid, item.selectedColor, item.selectedStorage)">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        } @else if (item.type === 'appliance') {
+          <p class="price">Price: ₹{{ item.price }}</p>
+          <p class="quantity">Quantity: {{ item.quantity }}</p>
+
+          <button class="Q" (click)="Adecrease(item.pid)">−</button>
+          <button class="Q" (click)="Aincrease(item.pid)">+</button>
+          <button (click)="Aremove(item.pid)">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        }
+
       </div>
     </div>
   }
-  @if (cartItems.length > 0) {
+
   <div class="cart-total">
     <h3>Total: ₹{{ getTotal() }}</h3>
   </div>
 
-  <button (click)="proceedToBuy()">proceed To Buy</button>
+  <button (click)="proceedToBuy()">Proceed To Buy</button>
   <a routerLink="/home">
-    <button >continue Shopping</button>
+    <button>Continue Shopping</button>
   </a>
-}
-
 } @else {
   <div class="cart-empty-message">Your cart is empty.</div>
 }
-
-

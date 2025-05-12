@@ -1,36 +1,44 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart/cart.service';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-buy',
-  standalone:false,
+  standalone: false,
   templateUrl: './buy.component.html',
-  styleUrl: './buy.component.css'
+  styleUrls: ['./buy.component.css']
 })
-export class BUYComponent {
-  cartItems: any[]=[];
-  totalAmount=0
-  constructor(private cartService:CartService,private router:Router){}
+export class BUYComponent implements OnInit {
+  cartItems: any[] = [];
+  totalAmount = 0;
+
+  constructor(private cartService: CartService, private router: Router) {}
 
   ngOnInit(): void {
     this.cartItems = this.cartService.getCartItems();
-    this.calculateTotal()
-
+    this.calculateTotal();
   }
-  calculateTotal(): void {
-  this.totalAmount = this.cartItems.reduce((acc, item) => {
-     return acc + (item.selectedStorage.price * (item.quantity || 1));
-  }, 0);
-}
 
-confirmOrder(){
-alert('Your Order is Placed')
-this.clearCart()
-this.router.navigate(['/home'])
-}
-clearCart(){
-  this.cartService.clearCart()
-  this.cartItems=[]
- }
+  calculateTotal(): void {
+    this.totalAmount = this.cartItems.reduce((acc, item) => {
+      if (item.type === 'mobile') {
+        return acc + (item.selectedStorage.price * (item.quantity || 1));
+      } else if (item.type === 'appliance') {
+        return acc + (item.price * (item.quantity || 1));
+      } else {
+        return acc; // fallback for unknown item types
+      }
+    }, 0);
+  }
+
+  confirmOrder(): void {
+    alert('Your Order is Placed');
+    this.clearCart();
+    this.router.navigate(['/home']);
+  }
+
+  clearCart(): void {
+    this.cartService.clearCart();
+    this.cartItems = [];
+  }
 }

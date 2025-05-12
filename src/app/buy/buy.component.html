@@ -1,23 +1,28 @@
 <h2>Review Your Order</h2>
 <br><br>
- <h3>Total Amount : {{totalAmount }}</h3>
-    <button class="cnfOrder" (click)="confirmOrder()" >Confirm order</button>
+<h3>Total Amount: ₹{{ totalAmount }}</h3>
+<button class="cnfOrder" (click)="confirmOrder()">Confirm Order</button>
 
-@if(cartItems.length>0){
-    
-    @for(item of cartItems;track item){
+@if (cartItems.length > 0) {
+  
+  @for (item of cartItems; track item) {
 
-        <div class="order-items">
-            <h3>{{item.model}}</h3>
-        <img [src]="item.src" alt="">
-       <div>
-         <p>{{item.selectedStorage.size}}, <strong>{{ item.selectedColor }}</strong></p>
-        <p> <strong>Quantity:</strong> {{item.quantity}}</p>
-        <p>Price: ₹{{ item.selectedStorage.price }}</p>
-       </div>
-        </div>
-        
-    }
+    <div class="order-items">
+      <h3>{{ item.model ? item.model.name : item.Product_name }}</h3>
+      <img [src]="item.src" alt="Product Image" />
 
-   
+      <div>
+        @if (item.type === 'mobile') {
+          <p>{{ item.selectedStorage.size }}, <strong>{{ item.selectedColor }}</strong></p>
+          <p><strong>Quantity:</strong> {{ item.quantity }}</p>
+          <p>Price: ₹{{ item.selectedStorage.price }}</p>
+        } @else if (item.type === 'appliance') {
+          <p><strong>Quantity:</strong> {{ item.quantity }}</p>
+          <p>Price: ₹{{ item.price }}</p>
+        }
+      </div>
+    </div>
+
+  }
 }
+

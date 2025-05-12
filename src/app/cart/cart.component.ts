@@ -1,47 +1,81 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from './cart.service';
 import { Router } from '@angular/router';
- // Import CartService
 
 @Component({
   selector: 'app-cart',
-  standalone: false,
+  standalone:false,
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
   cartItems: any[] = [];
 
-  constructor(private cartService: CartService, private router:Router) {}
+  constructor(private cartService: CartService, private router: Router) {}
 
   ngOnInit(): void {
-    // Get the cart items from the service
-    this.cartItems = this.cartService.getCartItems();
-  }
- increase(pid: number,selectedColor:string,selectedStorage:{},) {
-    this.cartService.increaseQuantity(pid,selectedColor,selectedStorage);
+    this.loadCartItems();
   }
 
-  decrease(pid: number,selectedColor:string,selectedStorage:{}) {
-    this.cartService.decreaseQuantity(pid,selectedColor,selectedStorage);
+  private loadCartItems(): void {
+    this.cartItems = this.cartService.getCartItems();
   }
-  // Remove item from cart
-  remove(pid:number,selectedColor:string,selectedStorage:{}): void {
-    this.cartService.removeFromCart(pid,selectedColor,selectedStorage);
-    this.cartItems = this.cartService.getCartItems();  // Update cart items after removal
+
+  // Mobile increase
+  increase(pid: number, selectedColor: string, selectedStorage: {}): void {
+    this.cartService.increaseQuantity(pid, selectedColor, selectedStorage);
+    this.loadCartItems();
   }
+
+  // Mobile decrease
+  decrease(pid: number, selectedColor: string, selectedStorage: {}): void {
+    this.cartService.decreaseQuantity(pid, selectedColor, selectedStorage);
+    this.loadCartItems();
+  }
+
+  // Mobile remove
+  remove(pid: number, selectedColor: string, selectedStorage: {}): void {
+    this.cartService.removeFromCart(pid, selectedColor, selectedStorage);
+    this.loadCartItems();
+  }
+
+  // Appliance increase
+  Aincrease(pid: number): void {
+    this.cartService.AincreaseQuantity(pid);
+    this.loadCartItems();
+  }
+
+  // Appliance decrease
+  Adecrease(pid: number): void {
+    this.cartService.AdecreaseQuantity(pid);
+    this.loadCartItems();
+  }
+
+  // Appliance remove
+  Aremove(pid: number): void {
+    this.cartService.AremoveFromCart(pid);
+    this.loadCartItems();
+  }
+
+  // Calculate total
   getTotal(): number {
-  let total = 0;
-  for (let item of this.cartItems) {
-    total += item.selectedStorage.price* item.quantity;
+    let total = 0;
+    for (let item of this.cartItems) {
+      if (item.type === 'mobile') {
+        total += item.selectedStorage.price * item.quantity;
+      } else if (item.type === 'appliance') {
+        total += item.price * item.quantity;
+      }
+    }
+    return total;
   }
-  return total;
-}
-proceedToBuy(){
-   this.router.navigate(['/buy']);
-}
- clearCart(){
-  this.cartService.clearCart()
-  this.cartItems=[]
- }
+
+  proceedToBuy(): void {
+    this.router.navigate(['/buy']);
+  }
+
+  clearCart(): void {
+    this.cartService.clearCart();
+    this.cartItems = [];
+  }
 }
