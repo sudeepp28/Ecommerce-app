@@ -1,0 +1,21 @@
+<h2>{{selectedProductName}}</h2>
+
+@if(selectedProductList.length > 0){
+  <div class="product-grid">
+    @for(product of selectedProductList; track product){
+     
+      
+       <a [routerLink]="['/toys-details',selectedProductId,product.pid]">
+          <div class="product-card">
+        <img [src]="product.src" [alt]="product.name">
+        <p class="product-name">{{product.name}}</p>
+        <p class="product-id">Price:  ₹{{product.price}}</p>
+      </div>
+     
+       </a>
+    }
+  </div>
+}
+ @else {
+  <p>No products available.</p>
+}

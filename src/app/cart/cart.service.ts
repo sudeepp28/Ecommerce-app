@@ -57,6 +57,23 @@ export class CartService {
     this.saveCartToLocalStorage();
   }
 
+  // Add Toys to cart
+
+  toysAddToCart(product: any): void {
+    const existingItem = this.cartItems.find(item =>
+      item.type === 'toys' &&
+      item.pid === product.pid
+    );
+
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      this.cartItems.unshift({ ...product, quantity: 1, type: 'toys' });
+    }
+
+    this.saveCartToLocalStorage();
+  }
+
   // Mobile Quantity +1
   increaseQuantity(pid: number, selectedColor: string, selectedStorage: {}): void {
     const item = this.cartItems.find(i =>
@@ -115,6 +132,20 @@ export class CartService {
     }
   }
 
+  // Toys Quantity+1
+
+   TincreaseQuantity(pid: number): void {
+    const item = this.cartItems.find(i =>
+      i.type === 'toys' &&
+      i.pid === pid
+    );
+
+    if (item) {
+      item.quantity += 1;
+      this.saveCartToLocalStorage();
+    }
+  }
+
   // Appliance Quantity -1
   AdecreaseQuantity(pid: number): void {
     const item = this.cartItems.find(i =>
@@ -128,10 +159,37 @@ export class CartService {
     }
   }
 
+  // Toys Quantity-1
+
+   TdecreaseQuantity(pid: number): void {
+    const item = this.cartItems.find(i =>
+      i.type === 'toys' &&
+      i.pid === pid
+    );
+
+    if (item && item.quantity > 1) {
+      item.quantity -= 1;
+      this.saveCartToLocalStorage();
+    }
+  }
+
   // Remove Appliance from Cart
   AremoveFromCart(pid: number): void {
     const index = this.cartItems.findIndex(item =>
-      item.type === 'appliance' &&
+      item.type === 'toys' &&
+      item.pid === pid
+    );
+
+    if (index > -1) {
+      this.cartItems.splice(index, 1);
+      this.saveCartToLocalStorage();
+    }
+  }
+
+   // Remove Toys from Cart
+  TremoveFromCart(pid: number): void {
+    const index = this.cartItems.findIndex(item =>
+      item.type === 'toys' &&
       item.pid === pid
     );
 

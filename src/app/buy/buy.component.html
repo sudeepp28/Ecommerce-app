@@ -1,28 +1,40 @@
 <h2>Review Your Order</h2>
 <br><br>
+
 <h3>Total Amount: ₹{{ totalAmount }}</h3>
 <button class="cnfOrder" (click)="confirmOrder()">Confirm Order</button>
 
 @if (cartItems.length > 0) {
-  
-  @for (item of cartItems; track item) {
-
+  @for (item of cartItems; track item.pid) {
     <div class="order-items">
-      <h3>{{ item.model ? item.model.name : item.Product_name }}</h3>
+      <h3>{{ item.model?.name || item.Product_name || item.name }}</h3>
       <img [src]="item.src" alt="Product Image" />
 
-      <div>
-        @if (item.type === 'mobile') {
+      @if (item.type === 'mobile') {
+        <div>
           <p>{{ item.selectedStorage.size }}, <strong>{{ item.selectedColor }}</strong></p>
           <p><strong>Quantity:</strong> {{ item.quantity }}</p>
           <p>Price: ₹{{ item.selectedStorage.price }}</p>
-        } @else if (item.type === 'appliance') {
+        </div>
+      } @else if (item.type === 'appliance') {
+        <div>
           <p><strong>Quantity:</strong> {{ item.quantity }}</p>
           <p>Price: ₹{{ item.price }}</p>
-        }
-      </div>
+        </div>
+      } @else if (item.type === 'toys') {
+        <div>
+          <p><strong>Quantity:</strong> {{ item.quantity }}</p>
+          <p>Price: ₹{{ item.price }}</p>
+        </div>
+      }
     </div>
-
   }
+} @else {
+  <div class="empty-cart-message">
+    Your cart is empty. Please add some items.
+  </div>
 }
 
+<a routerLink="/home">
+  <button>Continue Shopping</button>
+</a>

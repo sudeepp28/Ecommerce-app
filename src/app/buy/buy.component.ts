@@ -25,7 +25,10 @@ export class BUYComponent implements OnInit {
         return acc + (item.selectedStorage.price * (item.quantity || 1));
       } else if (item.type === 'appliance') {
         return acc + (item.price * (item.quantity || 1));
-      } else {
+      } else if(item.type==='toys'){
+         return acc + (item.price * (item.quantity || 1));
+      }
+       else {
         return acc; // fallback for unknown item types
       }
     }, 0);

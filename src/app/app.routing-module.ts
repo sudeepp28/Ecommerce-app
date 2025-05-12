@@ -10,6 +10,9 @@ import { BUYComponent } from './buy/buy.component';
 import { AppliancesComponent } from './appliances/appliances.component';
 import { ApplianceProductPageComponent } from './appliances/appliance-product-page/appliance-product-page.component';
 import { ApplianceProductDetailsComponent } from './appliances/appliance-product-details/appliance-product-details.component';
+import { ToysComponent } from './toys/toys.component';
+import { ToysPageComponent } from './toys/toys-page/toys-page.component';
+import { ToysProductDetailsComponent } from './toys/toys-product-details/toys-product-details.component';
 
 
 
@@ -23,7 +26,10 @@ const routes: Routes = [
   {path:'buy',component:BUYComponent},
   {path:'appliance', component:AppliancesComponent},
   {path:'appliance-product/:id',component:ApplianceProductPageComponent},
-  {path:'appliance-product/:id/:pid',component:ApplianceProductDetailsComponent}
+  {path:'appliance-product/:id/:pid',component:ApplianceProductDetailsComponent},
+  {path:'toys', component:ToysComponent},
+  {path:'toys-page/:id', component:ToysPageComponent},
+  {path:'toys-details/:id/:pid', component:ToysProductDetailsComponent}
   // <-- new route
 ];
 

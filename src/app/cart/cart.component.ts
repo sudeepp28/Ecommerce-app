@@ -45,15 +45,32 @@ export class CartComponent implements OnInit {
     this.loadCartItems();
   }
 
+  //Toys increase
+
+  Tincrease(pid: number): void {
+    this.cartService.TincreaseQuantity(pid);
+    this.loadCartItems();
+  }
+
   // Appliance decrease
   Adecrease(pid: number): void {
     this.cartService.AdecreaseQuantity(pid);
+    this.loadCartItems();
+  }
+  // Toys decrease
+  Tdecrease(pid: number): void {
+    this.cartService.TdecreaseQuantity(pid);
     this.loadCartItems();
   }
 
   // Appliance remove
   Aremove(pid: number): void {
     this.cartService.AremoveFromCart(pid);
+    this.loadCartItems();
+  }
+   // Toys remove
+  Tremove(pid: number): void {
+    this.cartService.TremoveFromCart(pid);
     this.loadCartItems();
   }
 
@@ -65,6 +82,9 @@ export class CartComponent implements OnInit {
         total += item.selectedStorage.price * item.quantity;
       } else if (item.type === 'appliance') {
         total += item.price * item.quantity;
+      }
+      else if(item.type==='toys'){
+        total+=item.price* item.quantity
       }
     }
     return total;

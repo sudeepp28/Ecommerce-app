@@ -44,6 +44,7 @@
 .product img{
     width: 4rem;
     height: 4rem;
+    border-radius: 10px;
 }
 .product span{
     text-align: center;

@@ -5,10 +5,10 @@
 
   @for (item of cartItems; track item.pid) {
     <div class="cart-item">
-      <img [src]="item.src" alt="{{ item.model || item.Product_name }}" />
+      <img [src]="item.src" alt="{{ item.model || item.Product_name || item.name }}" />
       <div class="product-details">
 
-        <h3>{{ item.model || item.Product_name }}</h3>
+        <h3>{{ item.model || item.Product_name || item.name }}</h3>
 
         @if (item.type === 'mobile') {
           <p>{{ item.selectedStorage.size }}, <strong>{{ item.selectedColor }}</strong></p>
@@ -27,6 +27,17 @@
           <button class="Q" (click)="Adecrease(item.pid)">−</button>
           <button class="Q" (click)="Aincrease(item.pid)">+</button>
           <button (click)="Aremove(item.pid)">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        }
+
+        @else if(item.type==='toys'){
+           <p class="price">Price: ₹{{ item.price }}</p>
+          <p class="quantity">Quantity: {{ item.quantity }}</p>
+
+          <button class="Q" (click)="Tdecrease(item.pid)">−</button>
+          <button class="Q" (click)="Tincrease(item.pid)">+</button>
+          <button (click)="Tremove(item.pid)">
             <i class="fa-solid fa-trash"></i>
           </button>
         }

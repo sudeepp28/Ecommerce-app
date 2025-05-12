@@ -20,16 +20,13 @@ export class ProductChartComponent {
     span:'Appliances',
     link:"/appliance"
   },
-  {src:'assets/product-chart/electronics.webp',
-    span:'Electronics',
-     link:""
+  {src:'assets/product-chart/Toy.avif',
+    span:'Toys',
+     link:"/toys"
   },
-  {src:'assets/product-chart/home&kitchen.webp',
-    span:'Home & Kitchen',
-     link:""
-  },
+  
   {src:'assets/product-chart/beauty.webp',
-    span:'Beauty',
+    span:'Beauty And Books',
     link:""
 
   },
