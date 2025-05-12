@@ -54,7 +54,7 @@ export class CartComponent implements OnInit {
 
   // Appliance decrease
   Adecrease(pid: number): void {
-    this.cartService.AdecreaseQuantity(pid);
+    this.cartService. AdecreaseQuantity(pid);
     this.loadCartItems();
   }
   // Toys decrease

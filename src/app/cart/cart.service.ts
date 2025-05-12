@@ -176,7 +176,7 @@ export class CartService {
   // Remove Appliance from Cart
   AremoveFromCart(pid: number): void {
     const index = this.cartItems.findIndex(item =>
-      item.type === 'toys' &&
+      item.type === 'appliance' &&
       item.pid === pid
     );
 
