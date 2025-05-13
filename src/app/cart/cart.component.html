@@ -2,6 +2,14 @@
 
 @if (cartItems.length > 0) {
   <button (click)="clearCart()">Clear Cart</button>
+   <div class="cart-total">
+    <h3>Total: ₹{{ getTotal() }}</h3>
+  </div>
+
+  <button (click)="proceedToBuy()">Proceed To Buy</button>
+  <a routerLink="/home">
+    <button>Continue Shopping</button>
+  </a>
 
   @for (item of cartItems; track item.pid) {
     <div class="cart-item">
@@ -51,19 +59,22 @@
             <i class="fa-solid fa-trash"></i>
           </button>
         }
+        @else if(item.type==='mens'){
+          <p class="price">Price: ₹{{ item.price }}</p>
+          <p class="quantity">Quantity: {{ item.quantity }}</p>
+
+          <button class="Q" (click)="fdecrease(item.pid)">−</button>
+          <button class="Q" (click)="fincrease(item.pid)">+</button>
+          <button (click)="fremove(item.pid)">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        }
 
       </div>
     </div>
   }
 
-  <div class="cart-total">
-    <h3>Total: ₹{{ getTotal() }}</h3>
-  </div>
-
-  <button (click)="proceedToBuy()">Proceed To Buy</button>
-  <a routerLink="/home">
-    <button>Continue Shopping</button>
-  </a>
+ 
 } @else {
   <div class="cart-empty-message">Your cart is empty.</div>
 }

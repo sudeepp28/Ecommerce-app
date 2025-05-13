@@ -8,7 +8,7 @@ import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 })
 export class SliderComponent implements AfterViewInit, OnDestroy {
   images = [
-    { src: 'assets/banner1.jpg', alt: 'Image 1' },
+    { src: 'assets/banner1.jpg', alt: 'Image 1',link:'/fashion' },
     { src: 'assets/banner2.jpg', alt: 'Image 2' },
     { src: 'assets/banner3.jpg', alt: 'Image 3' },
     { src: 'assets/banner4.jpg', alt: 'Image 4' },

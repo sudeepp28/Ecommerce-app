@@ -90,6 +90,23 @@ export class CartService {
     this.saveCartToLocalStorage();
   }
 
+  //Add mens to cart
+
+  mensAddToCart(product: any): void {
+    const existingItem = this.cartItems.find(item =>
+      item.type === 'mens' &&
+      item.pid === product.pid
+    );
+
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      this.cartItems.unshift({ ...product, quantity: 1, type: 'furniture' });
+    }
+
+    this.saveCartToLocalStorage();
+  }
+
   // Mobile Quantity +1
   increaseQuantity(pid: number, selectedColor: string, selectedStorage: {}): void {
     const item = this.cartItems.find(i =>
@@ -175,6 +192,20 @@ export class CartService {
     }
   }
 
+  // mens Quantity+1
+
+   mincreaseQuantity(pid: number): void {
+    const item = this.cartItems.find(i =>
+      i.type === 'mens' &&
+      i.pid === pid
+    );
+
+    if (item) {
+      item.quantity += 1;
+      this.saveCartToLocalStorage();
+    }
+  }
+
   // Appliance Quantity -1
   AdecreaseQuantity(pid: number): void {
     const item = this.cartItems.find(i =>
@@ -215,7 +246,19 @@ export class CartService {
       this.saveCartToLocalStorage();
     }
   }
+// mens Quantity-1
 
+mdecreaseQuantity(pid: number): void {
+    const item = this.cartItems.find(i =>
+      i.type === 'mens' &&
+      i.pid === pid
+    );
+
+    if (item && item.quantity > 1) {
+      item.quantity -= 1;
+      this.saveCartToLocalStorage();
+    }
+  }
   // Remove Appliance from Cart
   AremoveFromCart(pid: number): void {
     const index = this.cartItems.findIndex(item =>
@@ -247,6 +290,20 @@ export class CartService {
    fremoveFromCart(pid: number): void {
     const index = this.cartItems.findIndex(item =>
       item.type === 'furniture' &&
+      item.pid === pid
+    );
+
+    if (index > -1) {
+      this.cartItems.splice(index, 1);
+      this.saveCartToLocalStorage();
+    }
+  }
+
+  //remove mens from cart
+
+  mremoveFromCart(pid: number): void {
+    const index = this.cartItems.findIndex(item =>
+      item.type === 'mens' &&
       item.pid === pid
     );
 

@@ -29,6 +29,13 @@ import { FurnitureComponent } from "./furniture/furniture.component";
 import { FunitureBannersComponent } from "./furniture/funiture-banners/funiture-banners.component";
 import { FurniturePageComponent } from "./furniture/furniture-page/furniture-page.component";
 import { FurnitureDetailsComponent } from "./furniture/furniture-details/furniture-details.component";
+import { FashionComponent } from "./fashion/fashion.component";
+import { MensComponent } from "./fashion/mens/mens.component";
+import { WomensComponent } from "./fashion/womens/womens.component";
+import { KidsComponent } from "./fashion/kids/kids.component";
+import { MensBannerComponent } from "./fashion/mens/mens-banner/mens-banner.component";
+import { MensProductPageComponent } from "./fashion/mens/mens-product-page/mens-product-page.component";
+import { MensProductDetailsComponent } from "./fashion/mens/mens-product-details/mens-product-details.component";
 
 
 
@@ -59,7 +66,11 @@ import { FurnitureDetailsComponent } from "./furniture/furniture-details/furnitu
         FurnitureComponent,
         FunitureBannersComponent,
         FurniturePageComponent,
-        FurnitureDetailsComponent
+        FurnitureDetailsComponent,
+        FashionComponent,MensComponent,
+        WomensComponent,KidsComponent,
+        MensBannerComponent,MensProductPageComponent,
+        MensProductDetailsComponent
        ],
     bootstrap:[AppComponent],
     imports: [FormsModule,

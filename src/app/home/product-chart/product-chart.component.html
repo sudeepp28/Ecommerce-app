@@ -1,13 +1,29 @@
 <div class="product-container">
-    <div class="product-chart">
-        @for (product of products; track product.src) {
-         <a [routerLink]="product.link">
+  <div class="product-chart">
+    @for (product of products; track product.src) {
+      
+      <!-- This is the wrapper for each item -->
+      <div class="product-item" [class.has-dropdown]="product.dropDown?.length">
+
+        <!-- Main product link -->
+        <a [routerLink]="product.link || '#'" class="product-link">
           <div class="product">
-            <img [src]="product.src" alt="{{ product.span }}">
+            <img [src]="product.src" [alt]="product.span">
             <span>{{ product.span }}</span>
           </div>
-         </a>
+        </a>
+
+        <!-- Dropdown menu if exists -->
+        @if (product.dropDown?.length) {
+          <ul class="dropdown-menu">
+            @for (drop of product.dropDown; track drop.category) {
+              <li><a [routerLink]="drop.link || '#'">{{ drop.category }}</a></li>
+            }
+          </ul>
         }
+
       </div>
+
+    }
+  </div>
 </div>
-  
