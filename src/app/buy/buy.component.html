@@ -5,6 +5,8 @@
 <button class="cnfOrder" (click)="confirmOrder()">Confirm Order</button>
 
 @if (cartItems.length > 0) {
+
+  <p><strong>Total Items: <span>{{cartItems.length}}</span></strong></p>
   @for (item of cartItems; track item.pid) {
     <div class="order-items">
       <h3>{{ item.model?.name || item.Product_name || item.name }}</h3>
@@ -32,6 +34,10 @@
           <p>Price: ₹{{ item.price }}</p>
       }
       @else if (item.type==='mens') {
+          <p><strong>Quantity:</strong> {{ item.quantity }}</p>
+          <p>Price: ₹{{ item.price }}</p>
+      }
+      @else if (item.type==='Womens') {
           <p><strong>Quantity:</strong> {{ item.quantity }}</p>
           <p>Price: ₹{{ item.price }}</p>
       }

@@ -15,5 +15,7 @@ export const MensB=[
   { "id": 14, "name": "Wrist Watch", "src": "assets/fashion/mens/mensBanner/Wrist Watch.jpg", "price": 11999 },
   { "id": 15, "name": "Leather Belt", "src": "assets/fashion/mens/mensBanner/Leather Belt.jpg", "price": 1799 },
    { "id": 16, "name": "Dhoti", "src": "assets/fashion/mens/mensBanner/Dhoti.jpg", "price": 799 },
+   { "id": 17, "name": "Underwear", "src": "assets/fashion/mens/mensBanner/Underwear.jpg", "price": 799 },
+   { "id": 18, "name": "Banyan", "src": "assets/fashion/mens/mensBanner/Banyan.jpg", "price": 799 }
   
 ]

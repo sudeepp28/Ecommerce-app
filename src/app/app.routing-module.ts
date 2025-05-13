@@ -22,6 +22,8 @@ import { WomensComponent } from './fashion/womens/womens.component';
 import { KidsComponent } from './fashion/kids/kids.component';
 import { MensProductPageComponent } from './fashion/mens/mens-product-page/mens-product-page.component';
 import { MensProductDetailsComponent } from './fashion/mens/mens-product-details/mens-product-details.component';
+import { WomenPageComponent } from './fashion/womens/women-page/women-page.component';
+import { WomenProductDetailsComponent } from './fashion/womens/women-product-details/women-product-details.component';
 
 
 
@@ -47,7 +49,9 @@ const routes: Routes = [
   {path:'womens',component:WomensComponent},
   {path:'kids',component:KidsComponent},
   {path:'mens-product/:id', component:MensProductPageComponent},
-  {path:'mens-details/:id/:pid', component:MensProductDetailsComponent}
+  {path:'mens-details/:id/:pid', component:MensProductDetailsComponent},
+  {path:'women/:id', component:WomenPageComponent},
+  {path:'womenProduct/:id/:pid', component:WomenProductDetailsComponent}
   // <-- new route
 ];
 

@@ -36,6 +36,9 @@ import { KidsComponent } from "./fashion/kids/kids.component";
 import { MensBannerComponent } from "./fashion/mens/mens-banner/mens-banner.component";
 import { MensProductPageComponent } from "./fashion/mens/mens-product-page/mens-product-page.component";
 import { MensProductDetailsComponent } from "./fashion/mens/mens-product-details/mens-product-details.component";
+import { WomenBannerComponent } from "./fashion/womens/women-banner/women-banner.component";
+import { WomenPageComponent } from "./fashion/womens/women-page/women-page.component";
+import { WomenProductDetailsComponent } from "./fashion/womens/women-product-details/women-product-details.component";
 
 
 
@@ -70,7 +73,10 @@ import { MensProductDetailsComponent } from "./fashion/mens/mens-product-details
         FashionComponent,MensComponent,
         WomensComponent,KidsComponent,
         MensBannerComponent,MensProductPageComponent,
-        MensProductDetailsComponent
+        MensProductDetailsComponent,
+        WomenBannerComponent,
+        WomenPageComponent,
+        WomenProductDetailsComponent
        ],
     bootstrap:[AppComponent],
     imports: [FormsModule,

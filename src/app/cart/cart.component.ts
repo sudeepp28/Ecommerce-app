@@ -65,6 +65,10 @@ export class CartComponent implements OnInit {
     this.cartService.mincreaseQuantity(pid);
     this.loadCartItems();
   }
+   Wincrease(pid: number): void {
+    this.cartService.WincreaseQuantity(pid);
+    this.loadCartItems();
+  }
 
   // Appliance decrease
   Adecrease(pid: number): void {
@@ -89,9 +93,18 @@ export class CartComponent implements OnInit {
     this.cartService.mdecreaseQuantity(pid);
     this.loadCartItems();
   }
+// womens decrease
+  Wdecrease(pid: number): void {
+    this.cartService.WdecreaseQuantity(pid);
+    this.loadCartItems();
+  }
   // Appliance remove
   Aremove(pid: number): void {
     this.cartService.AremoveFromCart(pid);
+    this.loadCartItems();
+  }
+  Wremove(pid: number): void {
+    this.cartService.WremoveFromCart(pid);
     this.loadCartItems();
   }
    // Toys remove
@@ -111,6 +124,7 @@ export class CartComponent implements OnInit {
     this.cartService.mremoveFromCart(pid);
     this.loadCartItems();
   }
+  
   // Calculate total
   getTotal(): number {
     let total = 0;
@@ -126,7 +140,10 @@ export class CartComponent implements OnInit {
         total+=item.price* item.quantity
       }else if(item.type==='mens'){
         total+=item.price* item.quantity
-      }
+      } else if(item.type==='Womens')
+        {
+          total+= item.price*item.quantity
+        }
     }
     return total;
   }

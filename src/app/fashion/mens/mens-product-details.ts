@@ -284,5 +284,40 @@ export const MensDetails=[
   { "pid": 1612, "name": "Taneira Dhoti", "src": "assets/fashion/mens/mensBanner/Dhoti.jpg", "price": 2799 }
 ]
 
+    },{
+        id:17,
+        Underwear:[
+  { "pid": 1701, "name": "Jockey Underwear", "src": "assets/fashion/mens/mensBanner/Jockey Underwear.jpg", "price": 449 },
+  { "pid": 1702, "name": "Calvin Klein Underwear", "src": "assets/fashion/mens/mensBanner/Calvin Klein Underwear.jpg", "price": 1299 },
+  { "pid": 1703, "name": "Tommy Hilfiger Underwear", "src": "assets/fashion/mens/mensBanner/Tommy Hilfiger Underwear.jpg", "price": 1199 },
+  { "pid": 1704, "name": "Levi's Underwear", "src": "assets/fashion/mens/mensBanner/Levi's Underwear.jpg", "price": 699 },
+  { "pid": 1705, "name": "Hanes Underwear", "src": "assets/fashion/mens/mensBanner/Hanes Underwear.jpg", "price": 599 },
+  { "pid": 1706, "name": "Emporio Armani Underwear", "src": "assets/fashion/mens/mensBanner/Emporio Armani Underwear.jpg", "price": 1499 },
+  { "pid": 1707, "name": "Reebok Underwear", "src": "assets/fashion/mens/mensBanner/Reebok Underwear.jpg", "price": 799 },
+  { "pid": 1708, "name": "Puma Underwear", "src": "assets/fashion/mens/mensBanner/Puma Underwear.jpg", "price": 749 },
+  { "pid": 1709, "name": "Adidas Underwear", "src": "assets/fashion/mens/mensBanner/Adidas Underwear.jpg", "price": 899 },
+  { "pid": 1710, "name": "US Polo Assn Underwear", "src": "assets/fashion/mens/mensBanner/US Polo Assn Underwear.jpg", "price": 649 },
+  { "pid": 1711, "name": "Van Heusen Underwear", "src": "assets/fashion/mens/mensBanner/Van Heusen Underwear.jpg", "price": 599 },
+  { "pid": 1712, "name": "Zivame Underwear", "src": "assets/fashion/mens/mensBanner/Zivame Underwear.jpg", "price": 549 }
+]
+
+    },
+    {
+        id:18,
+        Banyan:[
+  { "pid": 1801, "name": "Jockey Banyan", "src": "assets/fashion/mens/mensBanner/Jockey Banyan.jpg", "price": 399 },
+  { "pid": 1802, "name": "Lux Cozi Banyan", "src": "assets/fashion/mens/mensBanner/Lux Cozi Banyan.jpg", "price": 299 },
+  { "pid": 1803, "name": "Rupa Frontline Banyan", "src": "assets/fashion/mens/mensBanner/Rupa Frontline Banyan.jpg", "price": 289 },
+  { "pid": 1804, "name": "Dollar Bigboss Banyan", "src": "assets/fashion/mens/mensBanner/Dollar Bigboss Banyan.jpg", "price": 279 },
+  { "pid": 1805, "name": "Amul Macho Banyan", "src": "assets/fashion/mens/mensBanner/Amul Macho Banyan.jpg", "price": 269 },
+  { "pid": 1806, "name": "VIP Banyan", "src": "assets/fashion/mens/mensBanner/VIP Banyan.jpg", "price": 249 },
+  { "pid": 1807, "name": "Levi's Banyan", "src": "assets/fashion/mens/mensBanner/Levi's Banyan.jpg", "price": 449 },
+  { "pid": 1808, "name": "Calvin Klein Banyan", "src": "assets/fashion/mens/mensBanner/Calvin Klein Banyan.jpg", "price": 1199 },
+  { "pid": 1809, "name": "Van Heusen Banyan", "src": "assets/fashion/mens/mensBanner/Van Heusen Banyan.jpg", "price": 489 },
+  { "pid": 1810, "name": "US Polo Assn Banyan", "src": "assets/fashion/mens/mensBanner/US Polo Assn Banyan.jpg", "price": 499 },
+  { "pid": 1811, "name": "Hanes Banyan", "src": "assets/fashion/mens/mensBanner/Hanes Banyan.jpg", "price": 399 },
+  { "pid": 1812, "name": "Puma Banyan", "src": "assets/fashion/mens/mensBanner/Puma Banyan.jpg", "price": 549 }
+]
+
     }
 ]

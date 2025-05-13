@@ -89,9 +89,6 @@ export class CartService {
 
     this.saveCartToLocalStorage();
   }
-
-  //Add mens to cart
-
   mensAddToCart(product: any): void {
     const existingItem = this.cartItems.find(item =>
       item.type === 'mens' &&
@@ -101,9 +98,26 @@ export class CartService {
     if (existingItem) {
       existingItem.quantity += 1;
     } else {
-      this.cartItems.unshift({ ...product, quantity: 1, type: 'furniture' });
+      this.cartItems.unshift({ ...product, quantity: 1, type: 'mens' });
     }
 
+    this.saveCartToLocalStorage();
+  }
+  
+  //add womens to Cart
+
+   WomensAddToCart(product: any): void {
+    const existingItem = this.cartItems.find(item =>
+      item.type === 'Womens' &&
+      item.pid === product.pid
+    );
+
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      this.cartItems.unshift({ ...product, quantity: 1, type: 'Womens' });
+    }
+console.log(this.cartItems)
     this.saveCartToLocalStorage();
   }
 
@@ -165,6 +179,19 @@ export class CartService {
     }
   }
 
+  //Womens Quantity+1
+
+   WincreaseQuantity(pid: number): void {
+    const item = this.cartItems.find(i =>
+      i.type === 'Womens' &&
+      i.pid === pid
+    );
+
+    if (item) {
+      item.quantity += 1;
+      this.saveCartToLocalStorage();
+    }
+  }
   // Toys Quantity+1
 
    TincreaseQuantity(pid: number): void {
@@ -233,6 +260,19 @@ export class CartService {
     }
   }
 
+  //Womens Quantity-1
+  WdecreaseQuantity(pid: number): void {
+    const item = this.cartItems.find(i =>
+      i.type === 'Womens' &&
+      i.pid === pid
+    );
+
+    if (item && item.quantity > 1) {
+      item.quantity -= 1;
+      this.saveCartToLocalStorage();
+    }
+  }
+
   // Furniture Quantity-1
 
    fdecreaseQuantity(pid: number): void {
@@ -290,6 +330,17 @@ mdecreaseQuantity(pid: number): void {
    fremoveFromCart(pid: number): void {
     const index = this.cartItems.findIndex(item =>
       item.type === 'furniture' &&
+      item.pid === pid
+    );
+
+    if (index > -1) {
+      this.cartItems.splice(index, 1);
+      this.saveCartToLocalStorage();
+    }
+  }
+   WremoveFromCart(pid: number): void {
+    const index = this.cartItems.findIndex(item =>
+      item.type === 'Womens' &&
       item.pid === pid
     );
 

@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="AppliancesBanner">
+      @for (banner of wBanner; track banner) {
+       
+         
+         
+            <a [routerLink]="['/women',banner.id]">
+                      <div >
+            <img [src]="banner.src" [alt]="banner.name">
+            <p>{{banner.name}}</p>
+            <p> <strong> Price :</strong>
+               {{banner.price}}</p>
+          </div>
+            </a>
+           
+            
+         
+        
+     
+      }
+    </div>
+  </div>
