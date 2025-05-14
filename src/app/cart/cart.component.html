@@ -5,7 +5,7 @@
   <p><strong>Total items : <span>
     {{cartItems.length}}
   </span></strong></p>
-  <button (click)="clearCart()">Clear Cart</button>
+  <button class="C" (click)="clearCart()">Clear Cart</button>
    <div class="cart-total">
     <h3>Total: ₹{{ getTotal() }}</h3>
   </div>
@@ -29,7 +29,7 @@
 
           <button class="Q" (click)="decrease(item.pid, item.selectedColor, item.selectedStorage)">−</button>
           <button class="Q" (click)="increase(item.pid, item.selectedColor, item.selectedStorage)">+</button>
-          <button (click)="remove(item.pid, item.selectedColor, item.selectedStorage)">
+          <button class="C" (click)="remove(item.pid, item.selectedColor, item.selectedStorage)">
             <i class="fa-solid fa-trash"></i>
           </button>
         } @else if (item.type === 'appliance') {
@@ -38,7 +38,7 @@
 
           <button class="Q" (click)=" Adecrease(item.pid)">−</button>
           <button class="Q" (click)="Aincrease(item.pid)">+</button>
-          <button (click)="Aremove(item.pid)">
+          <button class="C" (click)="Aremove(item.pid)">
             <i class="fa-solid fa-trash"></i>
           </button>
         }
@@ -49,7 +49,7 @@
 
           <button class="Q" (click)="Tdecrease(item.pid)">−</button>
           <button class="Q" (click)="Tincrease(item.pid)">+</button>
-          <button (click)="Tremove(item.pid)">
+          <button class="C" (click)="Tremove(item.pid)">
             <i class="fa-solid fa-trash"></i>
           </button>
         }
@@ -59,7 +59,7 @@
 
           <button class="Q" (click)="fdecrease(item.pid)">−</button>
           <button class="Q" (click)="fincrease(item.pid)">+</button>
-          <button (click)="fremove(item.pid)">
+          <button  class="C" (click)="fremove(item.pid)">
             <i class="fa-solid fa-trash"></i>
           </button>
         }
@@ -69,7 +69,7 @@
 
           <button class="Q" (click)="mdecrease(item.pid)">−</button>
           <button class="Q" (click)="mincrease(item.pid)">+</button>
-          <button (click)="mremove(item.pid)">
+          <button class="C" (click)="mremove(item.pid)">
             <i class="fa-solid fa-trash"></i>
           </button>
         }
@@ -79,7 +79,7 @@
 
           <button class="Q" (click)="Wdecrease(item.pid)">−</button>
           <button class="Q" (click)="Wincrease(item.pid)">+</button>
-          <button (click)="Wremove(item.pid)">
+          <button class="C" (click)="Wremove(item.pid)">
             <i class="fa-solid fa-trash"></i>
           </button>
        }
@@ -89,7 +89,7 @@
 
           <button class="Q" (click)="Kdecrease(item.pid)">−</button>
           <button class="Q" (click)="Kincrease(item.pid)">+</button>
-          <button (click)="Kremove(item.pid)">
+          <button class="C"(click)="Kremove(item.pid)">
             <i class="fa-solid fa-trash"></i>
           </button>
        }
