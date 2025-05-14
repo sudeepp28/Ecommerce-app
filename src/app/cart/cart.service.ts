@@ -120,6 +120,22 @@ export class CartService {
 console.log(this.cartItems)
     this.saveCartToLocalStorage();
   }
+  // kids AddtoCart
+
+  KidsAddToCart(product: any): void {
+    const existingItem = this.cartItems.find(item =>
+      item.type === 'kids' &&
+      item.pid === product.pid
+    );
+
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      this.cartItems.unshift({ ...product, quantity: 1, type: 'kids' });
+    }
+console.log(this.cartItems)
+    this.saveCartToLocalStorage();
+  }
 
   // Mobile Quantity +1
   increaseQuantity(pid: number, selectedColor: string, selectedStorage: {}): void {
@@ -232,6 +248,19 @@ console.log(this.cartItems)
       this.saveCartToLocalStorage();
     }
   }
+  // kids quantity +1
+
+   KincreaseQuantity(pid: number): void {
+    const item = this.cartItems.find(i =>
+      i.type === 'kids' &&
+      i.pid === pid
+    );
+
+    if (item) {
+      item.quantity += 1;
+      this.saveCartToLocalStorage();
+    }
+  }
 
   // Appliance Quantity -1
   AdecreaseQuantity(pid: number): void {
@@ -264,6 +293,19 @@ console.log(this.cartItems)
   WdecreaseQuantity(pid: number): void {
     const item = this.cartItems.find(i =>
       i.type === 'Womens' &&
+      i.pid === pid
+    );
+
+    if (item && item.quantity > 1) {
+      item.quantity -= 1;
+      this.saveCartToLocalStorage();
+    }
+  }
+  //Kids Quanity-1
+
+  KdecreaseQuantity(pid: number): void {
+    const item = this.cartItems.find(i =>
+      i.type === 'kids' &&
       i.pid === pid
     );
 
@@ -349,6 +391,19 @@ mdecreaseQuantity(pid: number): void {
       this.saveCartToLocalStorage();
     }
   }
+  // remove Kids from cart
+KremoveFromCart(pid: number): void {
+    const index = this.cartItems.findIndex(item =>
+      item.type === 'kids' &&
+      item.pid === pid
+    );
+
+    if (index > -1) {
+      this.cartItems.splice(index, 1);
+      this.saveCartToLocalStorage();
+    }
+  }
+
 
   //remove mens from cart
 

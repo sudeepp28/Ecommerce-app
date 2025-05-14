@@ -83,6 +83,16 @@
             <i class="fa-solid fa-trash"></i>
           </button>
        }
+        @else if(item.type==='kids'){
+<p class="price">Price: ₹{{ item.price }}</p>
+          <p class="quantity">Quantity: {{ item.quantity }}</p>
+
+          <button class="Q" (click)="Kdecrease(item.pid)">−</button>
+          <button class="Q" (click)="Kincrease(item.pid)">+</button>
+          <button (click)="Kremove(item.pid)">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+       }
 
       </div>
     </div>

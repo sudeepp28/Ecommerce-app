@@ -1,0 +1,36 @@
+<div class="button-group">
+  <button 
+    [class.active]="selectedCategory === 'boys'" 
+    (click)="selectCategory('boys')">
+    Boys
+  </button>
+  <button 
+    [class.active]="selectedCategory === 'girls'" 
+    (click)="selectCategory('girls')">
+    Girls
+  </button>
+</div>
+
+<div class="container">
+    <div class="AppliancesBanner">
+      @for (banner of filteredBanners; track banner) {
+       
+         <a [routerLink]="['/kids',banner.id]">
+              <div >
+            <img [src]="banner.src" [alt]="banner.name">
+            <p>{{banner.name}}</p>
+            <p> <strong> Price :</strong>
+               {{banner.price}}</p>
+          </div>
+         </a>
+         
+                
+        
+            
+         
+        
+     
+      }
+    </div>
+  </div>
+

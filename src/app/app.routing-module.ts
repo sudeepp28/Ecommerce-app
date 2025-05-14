@@ -24,6 +24,8 @@ import { MensProductPageComponent } from './fashion/mens/mens-product-page/mens-
 import { MensProductDetailsComponent } from './fashion/mens/mens-product-details/mens-product-details.component';
 import { WomenPageComponent } from './fashion/womens/women-page/women-page.component';
 import { WomenProductDetailsComponent } from './fashion/womens/women-product-details/women-product-details.component';
+import { KidsPageComponent } from './fashion/kids/kids-page/kids-page.component';
+import { KidsDetailsComponent } from './fashion/kids/kids-details/kids-details.component';
 
 
 
@@ -44,14 +46,15 @@ const routes: Routes = [
   {path:'furniture', component:FurnitureComponent},
   {path:'furniture-page/:id',component:FurniturePageComponent},
   {path:'furniture-details/:id/:pid', component:FurnitureDetailsComponent},
-  {path:'fashion', component:FashionComponent},
   {path:'mens', component:MensComponent},
   {path:'womens',component:WomensComponent},
   {path:'kids',component:KidsComponent},
   {path:'mens-product/:id', component:MensProductPageComponent},
   {path:'mens-details/:id/:pid', component:MensProductDetailsComponent},
   {path:'women/:id', component:WomenPageComponent},
-  {path:'womenProduct/:id/:pid', component:WomenProductDetailsComponent}
+  {path:'womenProduct/:id/:pid', component:WomenProductDetailsComponent},
+  {path:'kids/:id', component:KidsPageComponent},
+  {path:'kids-details/:id/:pid', component:KidsDetailsComponent}
   // <-- new route
 ];
 

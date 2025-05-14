@@ -69,6 +69,10 @@ export class CartComponent implements OnInit {
     this.cartService.WincreaseQuantity(pid);
     this.loadCartItems();
   }
+   Kincrease(pid: number): void {
+    this.cartService.KincreaseQuantity(pid);
+    this.loadCartItems();
+  }
 
   // Appliance decrease
   Adecrease(pid: number): void {
@@ -98,6 +102,10 @@ export class CartComponent implements OnInit {
     this.cartService.WdecreaseQuantity(pid);
     this.loadCartItems();
   }
+   Kdecrease(pid: number): void {
+    this.cartService.KdecreaseQuantity(pid);
+    this.loadCartItems();
+  }
   // Appliance remove
   Aremove(pid: number): void {
     this.cartService.AremoveFromCart(pid);
@@ -105,6 +113,10 @@ export class CartComponent implements OnInit {
   }
   Wremove(pid: number): void {
     this.cartService.WremoveFromCart(pid);
+    this.loadCartItems();
+  }
+   Kremove(pid: number): void {
+    this.cartService.KremoveFromCart(pid);
     this.loadCartItems();
   }
    // Toys remove
