@@ -15,19 +15,19 @@ export class MFlexBoardComponent {
       src: "assets/Mobile-assets/MBanner1.jpg",
       alt: "MBanner1",
       // Initially leave the link empty
-      link: ''
+      link: ['/product-page/',1]
     },
     {
       id: 2,
       src: "assets/Mobile-assets/MBanner2.jpeg",
       alt: "MBanner2",
-      link: ''
+      link: ['/product-page/',2]
     },
     {
       id: 3,
       src: "assets/Mobile-assets/MBanner3.jpeg",
       alt: "MBanner3",
-      link: ''
+      link: '/mobiles'
     }
   ];
 

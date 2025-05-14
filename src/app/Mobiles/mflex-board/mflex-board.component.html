@@ -1,7 +1,7 @@
 <div class="FB-container">
 <div class="flexboard">
    @for(image of flexImages; track image){
-    <a (click)="navigateToProduct(image.id)" >
+    <a [routerLink]="image.link" >
    <img [src]="image.src" [alt]="image.alt">
 </a>
    }
