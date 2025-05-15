@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { AppComponent } from "./app.component";
 import { BrowserModule } from "@angular/platform-browser";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 
 import { SliderComponent } from "./home/slider/slider.component";
@@ -42,6 +42,7 @@ import { WomenProductDetailsComponent } from "./fashion/womens/women-product-det
 import { KidsBannerComponent } from "./fashion/kids/kids-banner/kids-banner.component";
 import { KidsPageComponent } from "./fashion/kids/kids-page/kids-page.component";
 import { KidsDetailsComponent } from "./fashion/kids/kids-details/kids-details.component";
+import { SigninComponent } from "./signin/signin.component";
 
 
 
@@ -80,13 +81,14 @@ import { KidsDetailsComponent } from "./fashion/kids/kids-details/kids-details.c
         WomenBannerComponent,
         WomenPageComponent,
         WomenProductDetailsComponent,KidsBannerComponent,
-        KidsPageComponent,KidsDetailsComponent
+        KidsPageComponent,KidsDetailsComponent,SigninComponent
        ],
     bootstrap:[AppComponent],
     imports: [FormsModule,
          BrowserModule,
          CommonModule
-         ,AppRoutingModule]
+         ,AppRoutingModule,
+        ReactiveFormsModule]
 })
 
 export class AppModule{}
