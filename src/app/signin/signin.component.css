@@ -8,81 +8,88 @@
   font-family: 'Poppins', sans-serif;
 }
 /* Container styling */
+
+
+
+
 .container {
-  max-width: 400px;
-  margin: 80px auto;
-  padding: 30px 25px;
-  background: #fff;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  border-radius: 12px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
   color: #333;
 }
 
-/* Header */
-.container h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  font-weight: 700;
-  color: #0d6efd; /* Bootstrap primary blue */
+form {
+  display: flex;
+  flex-direction: column;
 }
 
-/* Inputs */
+input[type="text"],
 input[type="email"],
-input[type="password"],
-input[type="text"] {
-  width: 100%;
-  padding: 12px 15px;
-  margin: 10px 0 20px;
-  border: 1.8px solid #ddd;
-  border-radius: 8px;
-  font-size: 16px;
+input[type="password"] {
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
   transition: border-color 0.3s ease;
 }
 
-input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="text"]:focus {
-  border-color: #0d6efd;
+input:focus {
+  border-color: #7f5af0;
   outline: none;
-  box-shadow: 0 0 5px rgba(13, 110, 253, 0.5);
+  box-shadow: 0 0 5px rgba(127, 90, 240, 0.4);
 }
 
-/* Buttons */
-button {
-  width: 100%;
-  padding: 12px;
+button[type="submit"],
+button[type="button"] {
+  background: #7f5af0;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
   border: none;
-  border-radius: 8px;
-  background: #0d6efd;
-  color: white;
-  font-size: 18px;
-  font-weight: 600;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-bottom: 15px;
+  transition: background 0.3s ease;
+  margin-top: 0.5rem;
 }
 
 button:hover {
-  background: #0b5ed7;
+  background: #6542d0;
 }
 
-/* Paragraph under buttons */
 p {
+  margin-top: 1rem;
   text-align: center;
-  font-size: 14px;
-  color: #555;
+  font-size: 0.95rem;
+  color: #333;
 }
 
 p button {
   background: none;
   border: none;
-  color: #0d6efd;
-  font-weight: 700;
+  color: #25f809;
   cursor: pointer;
-  padding: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
 }
 
 p button:hover {
   text-decoration: underline;
 }
+
