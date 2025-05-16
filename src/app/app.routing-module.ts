@@ -26,7 +26,14 @@ import { WomenPageComponent } from './fashion/womens/women-page/women-page.compo
 import { WomenProductDetailsComponent } from './fashion/womens/women-product-details/women-product-details.component';
 import { KidsPageComponent } from './fashion/kids/kids-page/kids-page.component';
 import { KidsDetailsComponent } from './fashion/kids/kids-details/kids-details.component';
-import { SigninComponent } from './signin/signin.component';
+import { SigninComponent } from './author/signin/signin.component';
+import { RegisterComponent } from './author/register/register.component';
+import { BeautyComponent } from './beauty/beauty.component';
+import { BooksComponent } from './books/books.component';
+import { BeautyPageComponent } from './beauty/beauty-page/beauty-page.component';
+import { BooksPageComponent } from './books/books-page/books-page.component';
+import { BooksProductComponent } from './books/books-product/books-product.component';
+import { BeautyProductComponent } from './beauty/beauty-product/beauty-product.component';
 
 
 
@@ -56,7 +63,14 @@ const routes: Routes = [
   {path:'womenProduct/:id/:pid', component:WomenProductDetailsComponent},
   {path:'kids/:id', component:KidsPageComponent},
   {path:'kids-details/:id/:pid', component:KidsDetailsComponent},
-  {path:'signin', component:SigninComponent}
+  {path:'signin', component:SigninComponent},
+  {path:'register', component:RegisterComponent},
+  {path:'beauty', component:BeautyComponent},
+  {path:'books',component:BooksComponent},
+  {path:'beautypage/:id', component:BeautyPageComponent},
+   {path:'bookspage/:id', component:BooksPageComponent},
+   {path:'booksdetail/:id/:pid', component:BooksProductComponent},
+   {path:'beautydetail/:id/:pid', component:BeautyProductComponent}
   // <-- new route
 ];
 

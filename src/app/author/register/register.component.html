@@ -1,0 +1,7 @@
+ <form (ngSubmit)="onRegister()">
+      <input type="text" placeholder="userName" name="userName" [(ngModel)]="registerUserName">
+      <input type="email" placeholder="email" name="email" [(ngModel)]="registerEmail">
+      <input type="password" placeholder="password" name="password" [(ngModel)]="registerPassword">
+      <button type="submit">Register</button>
+      <p>Already Registered? <button type="button" (click)="toggleMode()">Login</button></p>
+  </form>

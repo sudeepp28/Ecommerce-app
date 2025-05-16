@@ -56,6 +56,39 @@ export class CartService {
 
     this.saveCartToLocalStorage();
   }
+  // Add books to cart
+
+   BooksAddToCart(product: any): void {
+    const existingItem = this.cartItems.find(item =>
+      item.type === 'books' &&
+      item.pid === product.pid
+    );
+
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      this.cartItems.unshift({ ...product, quantity: 1, type: 'books' });
+    }
+
+    this.saveCartToLocalStorage();
+  }
+
+  // Add Beauty to cart
+
+  BeautyAddToCart(product: any): void {
+    const existingItem = this.cartItems.find(item =>
+      item.type === 'beauty' &&
+      item.pid === product.pid
+    );
+
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      this.cartItems.unshift({ ...product, quantity: 1, type: 'beauty' });
+    }
+
+    this.saveCartToLocalStorage();
+  }
 
   // Add Toys to cart
 
@@ -208,6 +241,33 @@ console.log(this.cartItems)
       this.saveCartToLocalStorage();
     }
   }
+  //books Quantity+1
+
+  BooksincreaseQuantity(pid: number): void {
+    const item = this.cartItems.find(i =>
+      i.type === 'books' &&
+      i.pid === pid
+    );
+
+    if (item) {
+      item.quantity += 1;
+      this.saveCartToLocalStorage();
+    }
+  }
+
+  //beauty Quantity+1
+
+  BeautyincreaseQuantity(pid: number): void {
+    const item = this.cartItems.find(i =>
+      i.type === 'beauty' &&
+      i.pid === pid
+    );
+
+    if (item) {
+      item.quantity += 1;
+      this.saveCartToLocalStorage();
+    }
+  }
   // Toys Quantity+1
 
    TincreaseQuantity(pid: number): void {
@@ -266,6 +326,32 @@ console.log(this.cartItems)
   AdecreaseQuantity(pid: number): void {
     const item = this.cartItems.find(i =>
       i.type === 'appliance' &&
+      i.pid === pid
+    );
+
+    if (item && item.quantity > 1) {
+      item.quantity -= 1;
+      this.saveCartToLocalStorage();
+    }
+  }
+
+  //books Quanntity-1
+  BooksdecreaseQuantity(pid: number): void {
+    const item = this.cartItems.find(i =>
+      i.type === 'books' &&
+      i.pid === pid
+    );
+
+    if (item && item.quantity > 1) {
+      item.quantity -= 1;
+      this.saveCartToLocalStorage();
+    }
+  }
+  //beauty Quantity-1
+
+  BeautydecreaseQuantity(pid: number): void {
+    const item = this.cartItems.find(i =>
+      i.type === 'beauty' &&
       i.pid === pid
     );
 
@@ -345,6 +431,32 @@ mdecreaseQuantity(pid: number): void {
   AremoveFromCart(pid: number): void {
     const index = this.cartItems.findIndex(item =>
       item.type === 'appliance' &&
+      item.pid === pid
+    );
+
+    if (index > -1) {
+      this.cartItems.splice(index, 1);
+      this.saveCartToLocalStorage();
+    }
+  }
+  // Remove books from cart
+
+  BooksremoveFromCart(pid: number): void {
+    const index = this.cartItems.findIndex(item =>
+      item.type === 'books' &&
+      item.pid === pid
+    );
+
+    if (index > -1) {
+      this.cartItems.splice(index, 1);
+      this.saveCartToLocalStorage();
+    }
+  }
+  //remove beauty from cart
+
+  BeautyremoveFromCart(pid: number): void {
+    const index = this.cartItems.findIndex(item =>
+      item.type === 'beauty' &&
       item.pid === pid
     );
 

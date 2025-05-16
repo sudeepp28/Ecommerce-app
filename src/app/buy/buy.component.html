@@ -44,6 +44,12 @@
       @else if (item.type==='kids') {
           <p><strong>Quantity:</strong> {{ item.quantity }}</p>
           <p>Price: ₹{{ item.price }}</p>
+      } @else if (item.type==='books') {
+          <p><strong>Quantity:</strong> {{ item.quantity }}</p>
+          <p>Price: ₹{{ item.price }}</p>
+      } @else if (item.type==='beauty') {
+          <p><strong>Quantity:</strong> {{ item.quantity }}</p>
+          <p>Price: ₹{{ item.price }}</p>
       }
 
     </div>

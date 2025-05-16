@@ -42,7 +42,15 @@ import { WomenProductDetailsComponent } from "./fashion/womens/women-product-det
 import { KidsBannerComponent } from "./fashion/kids/kids-banner/kids-banner.component";
 import { KidsPageComponent } from "./fashion/kids/kids-page/kids-page.component";
 import { KidsDetailsComponent } from "./fashion/kids/kids-details/kids-details.component";
-import { SigninComponent } from "./signin/signin.component";
+import { SigninComponent } from "./author/signin/signin.component";
+import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { RegisterComponent } from "./author/register/register.component";
+import { BeautyComponent } from "./beauty/beauty.component";
+import { BooksComponent } from "./books/books.component";
+import { BeautyPageComponent } from "./beauty/beauty-page/beauty-page.component";
+import { BooksPageComponent } from "./books/books-page/books-page.component";
+import { BeautyProductComponent } from "./beauty/beauty-product/beauty-product.component";
+import { BooksProductComponent } from "./books/books-product/books-product.component";
 
 
 
@@ -81,7 +89,8 @@ import { SigninComponent } from "./signin/signin.component";
         WomenBannerComponent,
         WomenPageComponent,
         WomenProductDetailsComponent,KidsBannerComponent,
-        KidsPageComponent,KidsDetailsComponent,SigninComponent
+        KidsPageComponent,KidsDetailsComponent,SigninComponent, RegisterComponent,
+        BeautyComponent,BooksComponent, BeautyPageComponent,BooksPageComponent,BeautyProductComponent, BooksProductComponent
        ],
     bootstrap:[AppComponent],
     imports: [FormsModule,

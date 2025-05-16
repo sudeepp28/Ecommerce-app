@@ -86,6 +86,37 @@
   align-items: center;
   gap: 0.5rem;
 }
+.loginbtn{
+  position: relative;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 10%;
+  left: -190%;
+  background: #fff;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 12px;
+  color: #2874f0;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #2874f0;
+  color: #f0f0f0;
+}
 
 .help {
   display: flex;

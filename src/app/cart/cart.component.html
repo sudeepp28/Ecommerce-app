@@ -92,6 +92,24 @@
           <button class="C"(click)="Kremove(item.pid)">
             <i class="fa-solid fa-trash"></i>
           </button>
+       }@else if(item.type==='books'){
+<p class="price">Price: ₹{{ item.price }}</p>
+          <p class="quantity">Quantity: {{ item.quantity }}</p>
+
+          <button class="Q" (click)="Booksdecrease(item.pid)">−</button>
+          <button class="Q" (click)="Booksincrease(item.pid)">+</button>
+          <button class="C"(click)="Booksremove(item.pid)">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+       }@else if(item.type==='beauty'){
+<p class="price">Price: ₹{{ item.price }}</p>
+          <p class="quantity">Quantity: {{ item.quantity }}</p>
+
+          <button class="Q" (click)="Beautydecrease(item.pid)">−</button>
+          <button class="Q" (click)="Beautyincrease(item.pid)">+</button>
+          <button class="C"(click)="Beautyremove(item.pid)">
+            <i class="fa-solid fa-trash"></i>
+          </button>
        }
 
       </div>

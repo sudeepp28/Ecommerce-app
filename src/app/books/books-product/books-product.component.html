@@ -1,0 +1,23 @@
+@if(productDetails){
+   
+<div class="product-details-container">
+    
+    <img [src]="productDetails.src" alt="{{ productDetails.name }}" class="product-image" />
+    <div class="product-specs">
+   
+      <button class="cart product-button" (click)="addToCart()">Add to  <i class="fa-solid fa-cart-shopping"></i> </button>
+        <h1>{{productDetails.name}}</h1>
+      <p> <strong>Price :</strong> ₹{{productDetails.price}}</p>
+      
+      
+     
+
+
+    </div>
+</div>
+}
+  
+  @else {
+    <p>No Product Found!</p>
+  }
+  

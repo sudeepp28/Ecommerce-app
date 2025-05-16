@@ -74,6 +74,17 @@ export class CartComponent implements OnInit {
     this.loadCartItems();
   }
 
+  //books increase
+   Booksincrease(pid: number): void {
+    this.cartService.BooksincreaseQuantity(pid);
+    this.loadCartItems();
+  }
+ // beauty increase
+
+ Beautyincrease(pid: number): void {
+    this.cartService.BeautyincreaseQuantity(pid);
+    this.loadCartItems();
+  }
   // Appliance decrease
   Adecrease(pid: number): void {
     this.cartService. AdecreaseQuantity(pid);
@@ -106,6 +117,19 @@ export class CartComponent implements OnInit {
     this.cartService.KdecreaseQuantity(pid);
     this.loadCartItems();
   }
+  //books decrease
+
+   Booksdecrease(pid: number): void {
+    this.cartService.BooksdecreaseQuantity(pid);
+    this.loadCartItems();
+  }
+
+  //beauty decrease
+Beautydecrease(pid: number): void {
+    this.cartService.BeautydecreaseQuantity(pid);
+    this.loadCartItems();
+  }
+
   // Appliance remove
   Aremove(pid: number): void {
     this.cartService.AremoveFromCart(pid);
@@ -137,6 +161,18 @@ export class CartComponent implements OnInit {
     this.loadCartItems();
   }
   
+  //books remove 
+   Booksremove(pid: number): void {
+    this.cartService.BooksremoveFromCart(pid);
+    this.loadCartItems();
+  }
+
+  //beauty remove
+Beautyremove(pid: number): void {
+    this.cartService.BeautyremoveFromCart(pid);
+    this.loadCartItems();
+  }
+
   // Calculate total
   getTotal(): number {
     let total = 0;
@@ -155,7 +191,17 @@ export class CartComponent implements OnInit {
       } else if(item.type==='Womens')
         {
           total+= item.price*item.quantity
+        }else if(item.type==='kids')
+        {
+          total+= item.price*item.quantity
+        }else if(item.type==='books')
+        {
+          total+= item.price*item.quantity
+        }else if(item.type==='beauty')
+        {
+          total+= item.price*item.quantity
         }
+
     }
     return total;
   }

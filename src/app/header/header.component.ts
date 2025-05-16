@@ -1,5 +1,7 @@
 import { AfterViewInit, Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
+import { SiginService } from '../author/sigin.service';
+
 
 
 @Component({
@@ -9,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent implements AfterViewInit{
-  constructor(private route: Router ) { }
+  constructor(private route: Router, private signinService:SiginService ) { }
 
   ngAfterViewInit(): void {
     this.adjustBodyPadding();
@@ -25,13 +27,8 @@ export class HeaderComponent implements AfterViewInit{
     const navbarHeight = navbar ? navbar.offsetHeight : 0;
     body.style.paddingTop = navbarHeight + 'px';
   }
-isLogin=false
+
  login(){
-  this.isLogin=!this.isLogin
-if(this.isLogin){
-  this.route.navigate(['signin'])
-}else{
-  this.route.navigate(['home'])
-}
+  this.signinService.openLogin()
  }
 }

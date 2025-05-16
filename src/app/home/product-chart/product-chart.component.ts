@@ -19,7 +19,13 @@ export class ProductChartComponent {
     { src: 'assets/product-chart/mobile.webp', span: 'Mobiles & Tablets', link: '/mobiles' },
     { src: 'assets/product-chart/appliances.webp', span: 'Appliances', link: '/appliance' },
     { src: 'assets/product-chart/Toy.avif', span: 'Toys', link: '/toys' },
-    { src: 'assets/product-chart/beauty.webp', span: 'Beauty', link: '' },
+    { src: 'assets/product-chart/beauty.webp', span: 'Beauty, Books ', link: '',
+      dropDown:[
+        { category: 'Beauty', link: '/beauty' },
+        { category: 'Books', link: '/books' },
+        
+      ]
+     },
     {
       src: 'assets/product-chart/fashion.webp',
       span: 'Fashion',

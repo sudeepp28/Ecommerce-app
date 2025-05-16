@@ -1,0 +1,9 @@
+
+  
+
+<form (ngSubmit)="onLogin()">
+      <input type="email" placeholder="email" name="email" [(ngModel)]="loginEmail">
+      <input type="password" placeholder="password" name="password" [(ngModel)]="loginPassword">
+      <button type="submit">Login</button>
+      <p>If Don't have an account? <button type="button" (click)="toggleMode()">Register</button></p>
+  </form>

@@ -1,0 +1,22 @@
+export const BeautyBanners=[
+  { "id": 1, "name": "Face Wash", "src": "assets/beauty/banners/Face Wash.jpg", "price": 249 },
+  { "id": 2, "name": "Moisturizer", "src": "assets/beauty/banners/Moisturizer.jpg", "price": 349 },
+  { "id": 3, "name": "Face Serum", "src": "assets/beauty/banners/Face Serum.jpg", "price": 599 },
+  { "id": 4, "name": "Toner", "src": "assets/beauty/banners/Toner.jpg", "price": 299 },
+  { "id": 5, "name": "Sunscreen", "src": "assets/beauty/banners/Sunscreen.jpg", "price": 399 },
+  { "id": 6, "name": "Lip Balm", "src": "assets/beauty/banners/Lip Balm.jpg", "price": 199 },
+  { "id": 7, "name": "Shampoo", "src": "assets/beauty/banners/Shampoo.jpg", "price": 349 },
+  { "id": 8, "name": "Conditioner", "src": "assets/beauty/banners/Conditioner.jpg", "price": 329 },
+  { "id": 9, "name": "Hair Oil", "src": "assets/beauty/banners/Hair Oil.jpg", "price": 275 },
+  { "id": 10, "name": "Body Scrub", "src": "assets/beauty/banners/Body Scrub.jpg", "price": 449 },
+  { "id": 11, "name": "Face Mask", "src": "assets/beauty/banners/Face Mask.jpg", "price": 299 },
+  { "id": 12, "name": "Primer", "src": "assets/beauty/banners/Primer.jpg", "price": 499 },
+  { "id": 13, "name": "Foundation", "src": "assets/beauty/banners/Foundation.jpg", "price": 549 },
+  { "id": 14, "name": "Lipstick", "src": "assets/beauty/banners/Lipstick.jpg", "price": 399 },
+  { "id": 15, "name": "Night Cream", "src": "assets/beauty/banners/Night Cream.jpg", "price": 525 },
+  { "id": 16, "name": "Beard Oil", "src": "assets/beauty/banners/Beard Oil.jpg", "price": 299 },
+  { "id": 17, "name": "Shaving Foam", "src": "assets/beauty/banners/Shaving Foam.jpg", "price": 199 },
+  { "id": 18, "name": "Peel-Off Mask", "src": "assets/beauty/banners/Peel-Off Mask.jpg", "price": 349 },
+  { "id": 19, "name": "Face Cleanser", "src": "assets/beauty/banners/Face Cleanser.jpg", "price": 279 },
+  { "id": 20, "name": "Under Eye Cream", "src": "assets/beauty/banners/Under Eye Cream.jpg", "price": 475 }
+]
