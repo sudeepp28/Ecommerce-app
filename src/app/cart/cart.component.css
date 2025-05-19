@@ -45,7 +45,7 @@ h2{
   width: 120px;
   height: 120px;
   border-radius: 10px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .product-details {
