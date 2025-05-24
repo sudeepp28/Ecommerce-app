@@ -35,5 +35,9 @@ export class HeaderComponent implements AfterViewInit{
  openCart(){
   this.signinService.openCart()
  }
-
+onHome(){
+  this.route.navigate(['home'])
+  this.signinService.isLogin=false
+  this.signinService.iscart=false
+}
 }

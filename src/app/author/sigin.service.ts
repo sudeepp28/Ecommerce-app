@@ -14,6 +14,8 @@ if(this.isLogin){
   }
 }else{
   this.route.navigate(['home'])
+  this.isLogin=false
+  this.iscart=false
 } 
     }
      iscart=false
@@ -27,6 +29,8 @@ if(this.iscart){
   }
 }else{
   this.route.navigate(['home'])
+   this.isLogin=false
+  this.iscart=false
 } 
     }
 
