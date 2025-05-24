@@ -2,7 +2,7 @@
   <div id="image-container">
     <div id="slider">
       @for (image of images; track image) {
-        <img [src]="image.src" [alt]="image.alt"/>
+        <a [routerLink]="image.link"><img [src]="image.src" [alt]="image.alt" /></a>
       }
       <!-- Clone of the first image for seamless loop -->
       <img [src]="images[0].src" [alt]="images[0].alt" />

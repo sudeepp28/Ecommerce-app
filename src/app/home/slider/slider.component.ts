@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-slider',
@@ -8,13 +9,16 @@ import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 })
 export class SliderComponent implements AfterViewInit, OnDestroy {
   images = [
-    { src: 'assets/banner1.jpg', alt: 'Image 1',link:'/fashion' },
-    { src: 'assets/banner2.jpg', alt: 'Image 2' },
-    { src: 'assets/banner3.jpg', alt: 'Image 3' },
-    { src: 'assets/banner4.jpg', alt: 'Image 4' },
-    { src: 'assets/banner5.jpg', alt: 'Image 5' }
+    { src: 'assets/banner1.jpg', alt: 'Image 1', link:"/mens" },
+    { src: 'assets/banner2.jpg', alt: 'Image 2',link:"/kids" },
+    { src: 'assets/banner3.jpg', alt: 'Image 3',link:"/womens" },
+    { src: 'assets/banner4.jpg', alt: 'Image 4', link:"/mobiles" },
+    { src: 'assets/banner5.jpg', alt: 'Image 5', link:"/appliance" }
   ];
 
+  constructor(private router :Router ){
+
+  }
   current = 0;
   private intervalId: any;
 
@@ -52,4 +56,5 @@ export class SliderComponent implements AfterViewInit, OnDestroy {
       }
     }
   }
+  
 }
