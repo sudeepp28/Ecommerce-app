@@ -33,7 +33,7 @@ export class HeaderComponent implements AfterViewInit{
   this.signinService.openLogin()
  }
  openCart(){
-  this.cartService.openCart()
+  this.signinService.openCart()
  }
 
 }

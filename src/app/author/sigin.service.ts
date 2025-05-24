@@ -9,6 +9,22 @@ constructor(private route:Router){}
        this.isLogin=!this.isLogin
 if(this.isLogin){
   this.route.navigate(['signin'])
+  if(this.iscart===true){
+    this.iscart=false
+  }
+}else{
+  this.route.navigate(['home'])
+} 
+    }
+     iscart=false
+
+    openCart(){
+       this.iscart=!this.iscart
+if(this.iscart){
+  this.route.navigate(['cart'])
+  if(this.isLogin===true){
+    this.isLogin=false
+  }
 }else{
   this.route.navigate(['home'])
 } 
