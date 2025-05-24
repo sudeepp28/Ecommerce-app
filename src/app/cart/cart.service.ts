@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -6,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class CartService {
   private cartItems: any[] = [];
 
-  constructor() {
+  constructor( private route: Router) {
     this.loadCartFromLocalStorage();
   }
 
@@ -536,4 +537,16 @@ KremoveFromCart(pid: number): void {
     this.cartItems = [];
     localStorage.removeItem('cart');
   }
+
+
+  iscart=false
+
+    openCart(){
+       this.iscart=!this.iscart
+if(this.iscart){
+  this.route.navigate(['cart'])
+}else{
+  this.route.navigate(['home'])
+} 
+    }
 }

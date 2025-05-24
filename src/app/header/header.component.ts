@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { SiginService } from '../author/sigin.service';
+import { CartService } from '../cart/cart.service';
 
 
 
@@ -11,7 +12,7 @@ import { SiginService } from '../author/sigin.service';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent implements AfterViewInit{
-  constructor(private route: Router, private signinService:SiginService ) { }
+  constructor(private route: Router, private signinService:SiginService , private cartService:CartService) { }
 
   ngAfterViewInit(): void {
     this.adjustBodyPadding();
@@ -31,4 +32,8 @@ export class HeaderComponent implements AfterViewInit{
  login(){
   this.signinService.openLogin()
  }
+ openCart(){
+  this.cartService.openCart()
+ }
+
 }

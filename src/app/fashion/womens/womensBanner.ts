@@ -13,8 +13,8 @@ export const WomensB=[
   { "id": 12, "name": "Womens One Piece", "src": "assets/fashion/women/Womens One Piece.jpg", "price": 2499 },
   { "id": 13, "name": "Womens Sandals", "src": "assets/fashion/women/Womens Sandals.jpg", "price": 1299 },
   { "id": 14, "name": "Womens Wrist Watch", "src": "assets/fashion/women/Womens Wrist Watch.jpg", "price": 2999 },
-  { "id": 15, "name": " Bra", "src": "assets/fashion/women/Bra.jpg", "price": 899 },
-  { "id": 16, "name": " Panty", "src": "assets/fashion/women/Panty.jpg", "price": 499 },
+  // { "id": 15, "name": " Bra", "src": "assets/fashion/women/Bra.jpg", "price": 899 },
+  // { "id": 16, "name": " Panty", "src": "assets/fashion/women/Panty.jpg", "price": 499 },
   { "id": 17, "name": "Womens Suit Salwar", "src": "assets/fashion/women/Womens Suit.jpg", "price": 4999 },
   { "id": 18, "name": "Womens Kurti", "src": "assets/fashion/women/Womens Kurti.jpg", "price": 1099 },
   { "id": 19, "name": "Womens Lehnga", "src": "assets/fashion/women/Womens Lehnga.jpg", "price": 1099 }

@@ -37,9 +37,7 @@ h2{
   transition: transform 0.3s ease;
 }
 
-.cart-item:hover {
-  transform: scale(1.05);
-}
+
 
 .cart-item img {
   width: 120px;

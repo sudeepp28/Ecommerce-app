@@ -57,6 +57,9 @@ import { BooksProductComponent } from "./books/books-product/books-product.compo
 
 
 
+
+
+
 @NgModule({
     declarations:[AppComponent,
         SliderComponent,
@@ -90,7 +93,7 @@ import { BooksProductComponent } from "./books/books-product/books-product.compo
         WomenPageComponent,
         WomenProductDetailsComponent,KidsBannerComponent,
         KidsPageComponent,KidsDetailsComponent,SigninComponent, RegisterComponent,
-        BeautyComponent,BooksComponent, BeautyPageComponent,BooksPageComponent,BeautyProductComponent, BooksProductComponent
+        BeautyComponent,BooksComponent, BeautyPageComponent,BooksPageComponent,BeautyProductComponent, BooksProductComponent, 
        ],
     bootstrap:[AppComponent],
     imports: [FormsModule,

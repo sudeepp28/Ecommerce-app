@@ -37,6 +37,8 @@ import { BeautyProductComponent } from './beauty/beauty-product/beauty-product.c
 
 
 
+
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -70,7 +72,9 @@ const routes: Routes = [
   {path:'beautypage/:id', component:BeautyPageComponent},
    {path:'bookspage/:id', component:BooksPageComponent},
    {path:'booksdetail/:id/:pid', component:BooksProductComponent},
-   {path:'beautydetail/:id/:pid', component:BeautyProductComponent}
+   {path:'beautydetail/:id/:pid', component:BeautyProductComponent},
+   
+   
   // <-- new route
 ];
 

@@ -37,7 +37,7 @@ export class ProductChartComponent {
       ]
     },
     { src: 'assets/product-chart/furniture.webp', span: 'Furniture', link: '/furniture' },
-    { src: 'assets/product-chart/grocery.webp', span: 'Grocery', link: '' }
+    { src: 'assets/product-chart/grocery.webp', span: 'Grocery', link: '/grocery', }
   ];
 
   @Output() open = new EventEmitter();
